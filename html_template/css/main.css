@@ -1,0 +1,161 @@
+ ==========================================================================
+   Global Overrides
+  ========================================================================== */
+* {
+  box-sizing: border-box;
+/*  border: 1px solid black;
+*/}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/* ==========================================================================
+   Author's custom styles
+  ========================================================================== */
+
+/* Global
+   ================================================================ */
+
+/* Layout
+   ================================================================ */
+div#Content{
+  margin: 60px 40px 0px 114px;
+}
+
+header {
+  border: 1px solid black;
+  padding: 30px 0px;
+  width: 100%;
+}
+
+
+
+h1#Michelle {
+  float: left;
+  width: 130px;
+
+}
+
+h1#Spigner{
+  margin: 24px 40px 0px 40px;
+  width: 130px;
+  padding: 0px;
+}
+
+h2 {
+  position: absolute;
+  margin: 29px 188px;
+  margin-bottom:0px;
+  padding-top: 0px;
+}
+
+/*Sections*/
+div.Work {
+  display: none;
+  clear: both;
+  margin-top: 0px;
+  border: 1px solid black;
+}
+
+.Work-Icon{
+  margin: 0px;
+  float:left;
+}
+
+img.Work-Icon {
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+}
+
+li.Work-Icon p {
+  padding-top: 0px;
+  padding-left: 40px;
+  margin: 0px;
+  width: 60px;
+  float: left;
+  display: inline-block;
+}
+
+li {
+  clear: both;
+}
+
+div.Resume {
+  display: none;
+}
+
+div.About {
+  display: none;
+}
+
+/* Headings
+   ================================================================ */
+
+
+
+/* Text Styles
+   ================================================================ */
+html {
+  font-size: 20px;
+}
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
+  margin: 0px 40px;
+}
+
+h1#Michelle{
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+h1#Spigner{
+  font-size: 1rem;
+  padding: 0px;
+  text-align: right;
+}
+
+h2 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  font-size: 0.6rem;
+}
+
+ul {
+  list-style-type: none; 
+}
+
+li, li p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  font-size: 2.0rem;
+  text-transform: uppercase;
+}
+/* Classes
+   ================================================================ */
+.Open {
+  color: black;
+  font: 1.5rem;
+}
+
+
+/* Footer
+   ================================================================ */
+
+
+
+/* Navigation
+   ================================================================ */
+
+
+
+/* Buttons
+   ================================================================ 

@@ -1,0 +1,59 @@
+/*Global overrides*/
+* {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/* Layout
+   ================================================================ */
+header {
+	padding-top: 100px;
+	padding-bottom: 180px;
+	padding-right: auto;
+	padding-left: auto;
+}
+div#Name {
+	float: left;
+	width: 50%;
+	text-align: right;
+	padding: 0px 30px 0px 0px;
+}
+div#Descriptors {
+	float: left;
+	width: 50%;
+	text-align: left;
+	padding:0px 0px 0px 30px;
+}
+header h1, header p{
+	padding:0px;
+	margin: 0px;
+}
+div#Drop-Down {
+	clear: both;
+	margin-top: 100px;
+}
+button#sparknotes, button#unabridged {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+div#unabridged-button, div#sparknotes-button{
+	float: left;
+	width: 50%;
+}
+footer {
+	margin-top: 100px;
+}
+#footer-left, #footer-right{
+	float: left;
+	width:50%;
+}
+#footer-right{
+	text-align:right;
+}
