@@ -50,30 +50,34 @@
 // when user clicks Email Address in footer
 	// Open email in user's email program
 
-$('li.Work-Icon').on('click', function (){
+// $('li.Work-Icon').children('p').on('click', function (){
  
-	$('.Work').slideToggle();
-	// OpenDiv ();
+// 	$('.Work').slideToggle();
+// 	// OpenDiv ();
+// });
+
+// $('#Line').height($(document).height());
+$('#Work-Icon').children('p','img').on('click', function (){
+	$('.Resume').slideUp();
+	$('.About').slideUp();
+	$('.Work').slideToggle(200);
+
 });
 
 $('#Resume-Icon').on('click', function (){
-	$('.Resume').slideToggle();
+	$('.Work').slideUp();
+	$('.About').slideUp();
+	$('.Resume').slideToggle(200);
 });
 
 $('#About-Icon').on('click', function
 	(){
-	$('.About').slideToggle();
+	$('.Resume').slideUp();
+	$('Work').slideUp();
+	$('.About').slideToggle(200);
 });
 
-// function OpenDiv () {
-// 	if ($(div)).hasClass('.Open'){
-// 		$(div).slideUP;
-// 	}
-// 	else $(this).on{
-// 	$(div).slideToggle();
-// 	$(div).addClass('.Open');
-// 	}
-// }
+
 
 
 

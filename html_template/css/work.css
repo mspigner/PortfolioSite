@@ -1,0 +1,123 @@
+ * {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/*Layout===============================================*/
+header li {
+	display: inline block;
+}
+.Work_Full {
+	margin: 10% auto;
+	padding: 0% 15%;
+}
+div {
+	clear: both;
+}
+iframe {
+	text-align: center;
+	margin: 0% auto;
+	width: 100%;
+}
+#player {
+	margin: 1% 20%;
+}
+.BH_OOH,.BH_Wall,.HW,.SpeedStick,.Gatorade,.VictoriaS,.Challenge {
+	margin-bottom: 7%;
+	border: 1px solid gray;
+}
+video {
+	text-align: center;
+	margin: 1% auto;
+	width: 100%;
+
+}
+/*Bolthouse===============================================*/
+
+/*.BH_Wall {
+	display: block;
+}*/
+.BH_Wall{
+	overflow:hidden;
+}
+.BH_Wall img {
+	max-width: 100%;
+}
+.BH_Mid {
+	float: left;
+	width: 49.7%;
+	height: 250px;
+}
+#BH_Mid1 {
+	margin-right: 0.5%;
+}
+#BH_Mid3 {
+	margin:0.5% 2% 0 0;
+}
+#BH_Wall_2nd_P {
+	float: left;
+	width: 46%;
+	vertical-align: center;
+	text-align: left;
+	margin-left: 2%;
+	padding: 3.5% 0;
+}
+
+/*Speed Stick===============================================*/
+.SpeedStick {
+	clear: both;
+	margin-bottom: 6%;
+}
+.SpeedStick img {
+	float: left;
+	width: 39%;
+	padding-top: 5%;
+}
+.SpeedStick p {
+	float: left;
+	padding-left: 3%;
+	width: 58%;
+}
+
+/*Gatorade===============================================*/
+
+/*Challenge===============================================*/
+.Challenge img{
+	max-width: 100%;
+	height: 300px;
+	margin: 1% 14.5%;
+}
+.Challenge p {
+	margin: 1% 10%;
+}
+
+/*Font Styles ===============================================*/
+html {
+	font-size: 16px;
+}
+h1 {
+	font-family: 'Quicksand', sans-serif;
+  	font-weight: 300;
+  	font-size: 1.8rem;
+  	text-align: center
+}
+h2 {
+	font-family: 'Quicksand', sans-serif;
+  	font-weight: 300;
+  	font-size: 1.4rem;
+  	text-align: left;
+}
+p {
+	font-family: 'Quicksand', sans-serif;
+ 	font-weight: 400;
+	font-size: 1rem;
+}
+
+.active{
+	color: blue;
+}

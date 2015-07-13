@@ -1,7 +1,7 @@
- ==========================================================================
-   Global Overrides
-  ========================================================================== */
-* {
+/* ==========================================================================
+ Global Overrides
+ ========================================================================== */
+ * {
   box-sizing: border-box;
 /*  border: 1px solid black;
 */}
@@ -14,15 +14,29 @@
 
 /* ==========================================================================
    Author's custom styles
-  ========================================================================== */
+   ========================================================================== */
 
 /* Global
-   ================================================================ */
+================================================================ */
 
 /* Layout
-   ================================================================ */
+================================================================ */
 div#Content{
-  margin: 60px 40px 0px 114px;
+  margin: 60px auto;
+/*  position: absolute;*/
+  z-index: 2;
+  width: 100%;
+  margin: 12% auto;
+  padding: 0;
+}
+
+div#Line{
+  position: absolute;
+  top:114px;
+  left:42%;
+  border-left: 1px solid black;
+  height: 100%;
+  z-index: -1;
 }
 
 header {
@@ -32,11 +46,9 @@ header {
 }
 
 
-
 h1#Michelle {
   float: left;
   width: 130px;
-
 }
 
 h1#Spigner{
@@ -45,7 +57,7 @@ h1#Spigner{
   padding: 0px;
 }
 
-h2 {
+header h2 {
   position: absolute;
   margin: 29px 188px;
   margin-bottom:0px;
@@ -53,54 +65,378 @@ h2 {
 }
 
 /*Sections*/
-div.Work {
-  display: none;
+
+li.Section-Text{
+  margin:1% auto 1% auto;
+  text-align: center;
+  padding-top: 0px;
+  width: 20%;
   clear: both;
-  margin-top: 0px;
-  border: 1px solid black;
 }
 
-.Work-Icon{
-  margin: 0px;
-  float:left;
-}
-
-img.Work-Icon {
+img.Icon {
   width: 50px;
   height: 50px;
-  margin: 0px;
   padding: 0px;
+  clear: both;
   float: left;
 }
 
-li.Work-Icon p {
-  padding-top: 0px;
-  padding-left: 40px;
+li.Section-Text p {
+  padding:0px;
   margin: 0px;
-  width: 60px;
-  float: left;
-  display: inline-block;
+  text-align:left;
+  padding-left: 75px;
+  border-left: 1px solid black;
+}
+ul {
+  padding: 0px;
 }
 
-li {
+.Work, .Resume, .About {
+  display: none;
+  border: 1px solid black;
+  overflow: hidden;
+  z-index: 10;
+  margin: 3% auto 3% auto;
+}
+
+/* Work Section - Formatting ==============================================================*/
+
+.Work {
+  display: none;
+  clear: both;
+  background: url(../images/Background_Image.jpg);
+/*  background: url(../images/computer.jpg) center center no-repeat;
+*/  border: 1px solid gray;
+  background-size: cover; 
+  z-index: 10;
+  text-align: center;
+  height: 690px;
+  overflow: hidden;
+}
+.Work_TR {
+  margin-top: 5%;
+}
+.Work_BC {
+  margin-bottom: 5%;
+}
+
+div.Work_TR article {
+  float: left;
+  width: 25%;
+  height: 250px;
+  margin-right:.1%;
+  overflow: hidden;
+  position: relative;
+}
+
+div.Work_TR img, div.Work_BC img {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.Work_TR img {
+  height: 250px;
+}
+.Work_BC img {
+  width: 255px;
+}
+
+div.Work_TR, div.Wor_TR {
   clear: both;
 }
 
-div.Resume {
-  display: none;
+div.Work_BC article {
+  float: left;
+  margin-right:.1%;
+  margin-top: .1%;
+  width: 18.72%;
+  height: 270px;
+  overflow: hidden;
+  position: relative;
+}
+div.Work_TR article:nth-child(1), div.Work_BC article:nth-child(1){
+  margin-left: 12%;
+}
+div.Work_TR article:nth-child(3), div.Work_BC article:nth-child(4){
+  margin-right: 12%;
 }
 
-div.About {
+div.title {
   display: none;
+  position: absolute;
+  z-index: 20;
 }
 
-/* Headings
-   ================================================================ */
+article:hover div.title, article:hover div.title p {
+  display: block;
+}
+div.title {
+  background-color: rgba(24,157,170, 0.7);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left:0;
+  transition: all ease-in 2s;
+}
+div.title p {
+  top: 25%;
+  left: 0;
+}
+#TR-Work {
+  margin: 5% auto 1%;
+}
+
+/*Work Section - Pop Out Pages*/
+/*Layout===============================================*/
+.Work_Full, .Work_Full div {
+  display: none;
+}
+.Work_Full ul {
+  display: none;
+}
+.BH_OOH .active {
+  display: block;
+}
+.Work_Full li .active {
+  display: inline block;
+}
+.Work_Full {
+  margin: 10% auto;
+  padding: 0% 15%;
+}
+.Work_Full div {
+  clear: both;
+}
+iframe {
+  text-align: center;
+  margin: 0% auto;
+  width: 100%;
+}
+#player {
+  margin: 1% 20%;
+}
+.BH_OOH,.BH_Wall,.HW,.SpeedStick,.Gatorade,.VictoriaS,.Challenge {
+  margin-bottom: 7%;
+  border: 1px solid gray;
+}
+
+.Work_Full video {
+  text-align: center;
+  margin: 1% auto;
+  width: 100%;
+
+}
+/*Bolthouse===============================================*/
+
+/*.BH_Wall {
+  display: block;
+}*/
+.BH_Wall{
+  overflow:hidden;
+}
+.BH_Wall img {
+  max-width: 100%;
+}
+.BH_Mid {
+  float: left;
+  width: 49.7%;
+  height: 250px;
+}
+#BH_Mid1 {
+  margin-right: 0.5%;
+}
+#BH_Mid3 {
+  margin:0.5% 2% 0 0;
+}
+#BH_Wall_2nd_P {
+  float: left;
+  width: 46%;
+  vertical-align: center;
+  text-align: left;
+  margin-left: 2%;
+  padding: 3.5% 0;
+}
+
+/*Speed Stick===============================================*/
+.SpeedStick {
+  clear: both;
+  margin-bottom: 6%;
+}
+.SpeedStick img {
+  float: left;
+  width: 39%;
+  padding-top: 5%;
+}
+.SpeedStick p {
+  float: left;
+  padding-left: 3%;
+  width: 58%;
+}
+
+/*Gatorade===============================================*/
+
+/*Challenge===============================================*/
+.Challenge img{
+  max-width: 100%;
+  height: 300px;
+  margin: 1% 14.5%;
+}
+.Challenge p {
+  margin: 1% 10%;
+}
+
+/*Font Styles ===============================================*/
+.Work_Full html {
+  font-size: ;
+}
+.Work_Full h1 {
+  font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    text-align: center
+}
+.Work_Full h2 {
+  font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-align: left;
+}
+.Work_Full p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.Work_Full .active{
+  color: blue;
+}
+/* Resume Section - Formatting =====================================================
+=========*/
+.Resume {
+  height: 800px;
+  background-color: white;
+  z-index: 15;
+}
+
+.Experience {
+  z-index: 15;
+  height: 545px;
+  float: left;
+  width: 50%;
+  margin-right: 8%;
+  padding-bottom: 578px;
+  border-bottom: 1px solid #384544;
+
+}
+.Experience article {
+  margin-bottom: 4%;
+}
+.Education {
+  float: left;
+  width: 20%;
+  margin-left: 13%;
+  margin-right: 4%;
+  border-bottom: 1px solid #384544;
+}
+.Education article{
+  margin-bottom: 13%;
+}
+.Resume>h2{
+  text-align: left;
+  clear: both;
+  margin: 0% 8%;
+  padding: 0;
+}
+
+.Skills {
+  clear: both;
+  text-align: center;
+  padding-top: 20px;
+}
+#PDF {
+  margin-right: 8%;
+}
 
 
+/* About Section
+================================================================ */
+.About {
+  background: url(../images/Background_Image_2.jpg)center center no-repeat;
+/*  background-color: #5DADB8;*/
+  z-index: 23;
+  height: 780px;
+  position: relative;
+}
+.About_White {
+  background-color: rgba(255,255,255, 0.6);
+  margin: 2% 8%;
+  padding-bottom: 5%;
+/*  border: 1px solid #384544;
+*/}
+.About img{
+  float:left;
+  width: 26%; 
+  height: 53%;
+/*  border: 3px solid #EF6764;
+*/  margin: 4% 3% 1% 16%;
+  overflow: hidden;
+  position: relative;
+  border: 4px solid #40ABB0;
+  padding: 1%;
+}
+.About_Text {
+  float: left;
+  margin-left: 2%;
+  width: 48%;
+  margin: 10% auto 0 auto;
+  padding: 2%;
+  z-index: 24;
+  height: 350px;
+}
+.About_Text h2 {
+  margin: 0 auto 4% auto;
+  z-index: 22;
+  text-align: center;
+  background-color: #40ABB0;
+  color: white;
+  padding: 1.2%;
+  width: 70%;
+}
+.Fun-Stuff {
+  clear: both;
+}
+.Fun-Stuff h2 {
+  background-color: none;
+  color: black;
+  border-bottom: 1px solid black;
+  padding: 1% 0 1.3% 0;
+  width: 50%;
+  margin: 1% auto 1% auto;
+}
+
+.About p {
+margin: 0;
+padding: 0;
+color: black;
+}
+
+.Fun-Stuff p {
+  width: 80%;
+  margin: 0 auto;
+}
+.line_horizontal {
+  position: absolute;
+  border:1px solid #189DAA;
+  width: 11.8%;
+  top: 27%;
+  left: 45%;
+}
 
 /* Text Styles
-   ================================================================ */
+================================================================ */
 html {
   font-size: 20px;
 }
@@ -123,10 +459,16 @@ h1#Spigner{
   text-align: right;
 }
 
-h2 {
+header>h2 {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
   font-size: 0.6rem;
+}
+h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin-top: 20px;
 }
 
 ul {
@@ -139,8 +481,96 @@ li, li p {
   font-size: 2.0rem;
   text-transform: uppercase;
 }
+
+div.title p {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 100;
+  text-align: center;
+  color: white;
+  vertical-align: text-bottom;
+;
+}
+div.title p:first-child {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1.3rem;
+  margin-bottom: 5px;
+  padding: 25% 10% 0% 10%;
+}
+div.title p:nth-child(2){
+  font-size: 0.8rem;
+  line-height: 0.7rem;
+  margin-top: 0;
+  padding: 0 10% 25% 10%;
+}
+
+.Resume p {
+  font-size: 0.6rem;
+  font-family: 'Quicksand', sans-serif;
+}
+.Resume h2 {
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #4B918D;
+  padding: 0;
+}
+.Experience h2 {
+  width: 55%;
+  text-align: center;
+  background-color: #189DAA;
+  color: white;
+  padding: 5px;
+}
+.Education h2{
+  width: 100%;
+  text-align: center;
+  background-color: #189DAA;
+  color: white;
+  padding: 5px;
+}
+.Education p {
+  text-align: right
+}
+.Resume strong {
+  font-size: 0.8rem;
+}
+.Education strong {
+  text-transform: uppercase;
+}
+.Skills h2 {
+  text-align: center;
+}
+#PDF{
+  text-align: right;
+  text-transform: uppercase;
+}
+.About h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align:center;
+}
+.Fun-Stuff h2 {
+  font-size: 1.2rem;
+}
+.About p {
+  font-family: 'Lato', sans-serif;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: black;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.Fun-Stuff p {
+  line-height: 1.5rem;
+}
+
 /* Classes
-   ================================================================ */
+================================================================ */
 .Open {
   color: black;
   font: 1.5rem;
@@ -148,12 +578,12 @@ li, li p {
 
 
 /* Footer
-   ================================================================ */
+================================================================ */
 
 
 
 /* Navigation
-   ================================================================ */
+================================================================ */
 
 
 
