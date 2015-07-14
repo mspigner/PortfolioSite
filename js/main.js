@@ -58,15 +58,15 @@
 
 // $('#Line').height($(document).height());
 $('#Work-Icon').children('p','img').on('click', function (){
-	$('.Resume').slideUp();
-	$('.About').slideUp();
+	// $('.Resume').slideUp();
+	// $('.About').slideUp();
 	$('.Work').slideToggle(200);
 
 });
 
 $('#Resume-Icon').on('click', function (){
-	$('.Work').slideUp();
-	$('.About').slideUp();
+	// $('.Work').slideUp();
+	// $('.About').slideUp();
 	$('.Resume').slideToggle(200);
 });
 

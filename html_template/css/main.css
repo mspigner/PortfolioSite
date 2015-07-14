@@ -21,6 +21,16 @@
 
 /* Layout
 ================================================================ */
+.Section {
+  -webkit-box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
+  -moz-box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
+  box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
+  display: none;
+  overflow: hidden;
+  z-index: 10;
+  margin: 3% auto 3% auto;
+}
+
 div#Content{
   margin: 60px auto;
 /*  position: absolute;*/
@@ -40,9 +50,13 @@ div#Line{
 }
 
 header {
-  border: 1px solid black;
   padding: 30px 0px;
   width: 100%;
+  background-color: rgba(86,87,87,0.6);
+  position: fixed;
+  top: 0;
+  left:0;
+  z-index: 100;
 }
 
 
@@ -93,14 +107,6 @@ ul {
   padding: 0px;
 }
 
-.Work, .Resume, .About {
-  display: none;
-  border: 1px solid black;
-  overflow: hidden;
-  z-index: 10;
-  margin: 3% auto 3% auto;
-}
-
 /* Work Section - Formatting ==============================================================*/
 
 .Work {
@@ -108,7 +114,7 @@ ul {
   clear: both;
   background: url(../images/Background_Image.jpg);
 /*  background: url(../images/computer.jpg) center center no-repeat;
-*/  border: 1px solid gray;
+*/ 
   background-size: cover; 
   z-index: 10;
   text-align: center;
@@ -157,31 +163,31 @@ div.Work_BC article {
   overflow: hidden;
   position: relative;
 }
-div.Work_TR article:nth-child(1), div.Work_BC article:nth-child(1){
+.Work_TR article:nth-child(1), div.Work_BC article:nth-child(1){
   margin-left: 12%;
 }
-div.Work_TR article:nth-child(3), div.Work_BC article:nth-child(4){
+.Work_TR article:nth-child(3), div.Work_BC article:nth-child(4){
   margin-right: 12%;
 }
 
-div.title {
+.title {
   display: none;
   position: absolute;
   z-index: 20;
-}
-
-article:hover div.title, article:hover div.title p {
-  display: block;
-}
-div.title {
   background-color: rgba(24,157,170, 0.7);
   height: 100%;
   width: 100%;
   top: 0;
   left:0;
-  transition: all ease-in 2s;
 }
-div.title p {
+
+article:hover .title, article:hover .title p {
+  display: block;
+  transition: all 3s ease-in-out;
+}
+
+
+.title p {
   top: 25%;
   left: 0;
 }
@@ -450,18 +456,21 @@ h1 {
 h1#Michelle{
   font-size: 1.2rem;
   text-align: right;
+  color: white;
 }
 
 h1#Spigner{
   font-size: 1rem;
   padding: 0px;
   text-align: right;
+  color:white;
 }
 
 header>h2 {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
   font-size: 0.6rem;
+  color: white;
 }
 h3 {
   font-family: 'Quicksand', sans-serif;
