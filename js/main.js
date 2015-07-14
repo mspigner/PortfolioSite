@@ -78,6 +78,45 @@ $('#About-Icon').on('click', function
 });
 
 
+// when the user clicks on the section-text class
+$('Section-li').on('click',function (){
+	// Hide Icon image (class Section-Icon)
+	// Hide Section text (class Section-Title)
+	$(this).addClass('Closed');
+	// Display Div Title (class Section-Div-Title)
+	$(this).find('h1').addClass('Open');
+});
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
