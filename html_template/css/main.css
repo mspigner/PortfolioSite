@@ -50,15 +50,20 @@ div#Line{
 }
 
 header {
-  padding: 30px 0px;
+  padding: 10px 0px;
   width: 100%;
-  background-color: rgba(86,87,87,0.6);
+  background-color: rgb(86,87,87);
   position: fixed;
   top: 0;
   left:0;
   z-index: 100;
+  height:1000px;
 }
 
+.load {
+  margin: 10% auto;
+  height:100%;
+}
 
 h1#Michelle {
   float: left;
@@ -81,9 +86,9 @@ header h2 {
 /*Sections*/
 
 li.Section-Text{
-  margin:1% auto 1% auto;
+  margin:2% auto 2% auto;
   text-align: center;
-  padding-top: 0px;
+  padding: 3px 0 1px 0;
   width: 20%;
   clear: both;
 }
@@ -104,7 +109,7 @@ li.Section-Text p {
   border-left: 1px solid black;
 }
 ul {
-  padding: 0px;
+  padding: 5% 0 5% 0;
 }
 
 /* Work Section - Formatting ==============================================================*/
@@ -437,7 +442,7 @@ color: black;
   border:1px solid #189DAA;
   width: 11.8%;
   top: 27%;
-  left: 45%;
+  left: 46%;
 }
 
 /* Text Styles
@@ -454,24 +459,37 @@ h1 {
 }
 
 h1#Michelle{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: right;
   color: white;
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 100;
 }
 
 h1#Spigner{
-  font-size: 1rem;
+  font-size: 1.4rem;
   padding: 0px;
   text-align: right;
   color:white;
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 100;
+  line-height: 0.6rem
 }
 
-header>h2 {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 300;
-  font-size: 0.6rem;
+#Title-Load2 {
+/*  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;*/
+  font-family: 'Loved by the King', cursive;
+  font-size: 1rem;
   color: white;
 }
+
+/*#Title-Load p {
+  visibility: visible;
+  opacity: 1;
+ 
+  margin: 0 auto;
+}*/
 h3 {
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
@@ -484,19 +502,32 @@ ul {
 }
 
 li, li p {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 100;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  list-style: none;
+}
+.Section h1 {
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 100;
   font-size: 2.0rem;
   text-transform: uppercase;
+  z-index: 200;
+  position: relative;
+  padding: 0;
+  margin: 2% auto -3% auto;
+  border-bottom: 1px solid black;
+  width: 20%;
+  text-align: center;
 }
-
 div.title p {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-weight: 100;
   text-align: center;
   color: white;
   vertical-align: text-bottom;
-;
+
 }
 div.title p:first-child {
   text-transform: uppercase;
@@ -579,9 +610,95 @@ div.title p:nth-child(2){
 
 /* Classes
 ================================================================ */
-.Open {
-  color: black;
-  font: 1.5rem;
+
+
+.Closed .Icon, .Closed {
+  display: none;
+}
+
+.Closed .Work_TR{
+  margin-top: 1%;
+}
+.Collapse {
+  padding-top: 0;
+  margin-top: 0;
+}
+/*To change the size of the text in the header upon page load.*/
+.PageLoad {
+  background-color: rgb(86,87,87);
+}
+.PageLoad #Michelle, .PageLoad #Spigner, .PageLoad h2 {
+  position: static;
+  float: left;
+  font-size: 3rem;
+  clear: both;
+  width: 100%;
+  margin: 0 auto;
+  text-align:center;
+  line-height: 2.5rem;
+  padding:0;
+}
+
+#Title-Load li {
+  opacity: 0;
+  /*ont-family: 'Fira Sans', sans-serif;*/
+/*  font-weight: 300;*/
+  font-family: 'Loved by the King', cursive;
+  text-transform: lowercase;
+  font-size: 2rem;
+  color: white;
+  clear:both;
+  float:left;
+  width: 100%;
+  margin: 0 auto;
+  text-align:center;
+  line-height: 0rem;
+  padding: 0;
+}
+
+#Title-Load {
+  clear:both;
+  list-style: none;
+  padding:30px;
+}
+
+/*Animations ====================================================*/
+/*#Thinker {
+  transition: all 400ms ease-in-out;
+}*/
+
+.fade-In {
+  -webkit-animation: fadein 1000ms ease-in-out 600ms;
+  -moz-animation: fadein 1000ms ease-in-out 600ms;
+  -ms-animation ease-in 1s: fadein 1000ms ease-in-out 600ms;
+  -o-animation: fadein 1000ms ease-in-out 600ms;
+  animation: fadein 1000ms ease-in 600ms;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 
