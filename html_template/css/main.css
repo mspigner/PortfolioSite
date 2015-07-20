@@ -103,7 +103,7 @@ header h2 {
   text-align: center;
   background-color: white;
   padding: 3px auto 1px auto;
-  width: 20%;
+  width: 35%;
   height: 52px;
   clear:both;
   overflow:hidden;
@@ -148,7 +148,6 @@ ul.Main_Sections {
   background: url(../images/Background_Image.jpg);
   background-size: cover; 
   text-align: center;
-  height: 650px;
   overflow: hidden;
 }
 .Work_TR {
@@ -158,38 +157,34 @@ ul.Main_Sections {
   margin-bottom: 5%;
 }
 
-div.Work_TR article {
+.Work_TR article {
   float: left;
   width: 25%;
-  height: 250px;
   margin-right:.1%;
   overflow: hidden;
   position: relative;
+  margin-bottom:-4px;
 }
 
-div.Work_TR img, div.Work_BC img {
+.Work_TR img, div.Work_BC img {
   max-width: 100%;
   max-height: 100%;
   padding: 0;
   margin: 0;
 }
-.Work_TR img {
-  height: 250px;
-}
 .Work_BC img {
   width: 255px;
 }
 
-div.Work_TR, div.Wor_TR {
+.Work_TR, div.Wor_TR {
   clear: both;
 }
 
-div.Work_BC article {
+.Work_BC article {
   float: left;
   margin-right:.1%;
   margin-top: .1%;
   width: 18.72%;
-  height: 270px;
   overflow: hidden;
   position: relative;
 }
@@ -208,6 +203,8 @@ div.Work_BC article {
   background-color: rgba(24,157,170, 0.7);
   height: 100%;
   width: 100%;
+  padding: 0;
+  margin: 0;
   top: 0;
   left:0;
   -webkit-transition: all 500ms ease-in-out;
@@ -236,6 +233,7 @@ article:hover .title, article:hover .title p {
   margin: 0;
   padding: 0;
   font-size: 0.5rem;
+
 }
 .button_div {
   display: none;
@@ -244,7 +242,7 @@ article:hover .title, article:hover .title p {
   cursor: pointer;
   text-align: center;
   opacity: 0.6;
-  margin: 4px 71.5% 1px 8.5%;
+  margin: 18px 44% 18px 44%;
 }
 
 .button_div p {
@@ -266,17 +264,20 @@ article:hover .title, article:hover .title p {
 }
 
 .Work_Full {
-  margin:0% 0 0.5% 0;
+  margin:0% 0 0% 0;
   padding: 0;
   position: relative;
   width:100%;
+  height: 100%;
   background-color:white;
-  height:100%;
+  -webkit-box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
+  -moz-box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
+  box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
+
 }
 
 .BH_OOH,.BH_Wall, .HW, .SpeedStick,.Gatorade,.VictoriaS,.Challenge {
-  margin-bottom: 7%;
-  height: 575px;
+  margin-bottom: 3%;
   width: 100%;
   display: none;
   background-color:white;
@@ -397,12 +398,11 @@ video {
 .BH_Wall_Text article {
   float: left;
   width: 31%;
-  height: 177px;
   text-align: left;
   margin: 7px 0 auto 2%;
   padding: 0 2% 20px 0;
   border-right: 1px solid rgb(135,175,32);
-  /*  height: 163px;*/
+    height: 163px;
 
 }
 .BH_Wall_Text article:first-child {
@@ -602,6 +602,7 @@ video {
 }
 .Challenge p {
   margin: 1% 10%;
+  text-align: center;
 }
 /*Victoria's Secret ===========================================================*/
 .VictoriaS {
@@ -630,27 +631,24 @@ video {
   float: left;
   margin: 13% 4% 13% 3%;
   z-index:40;
-  position: absolute;
   top: 0;
   left: 0;
 }
 
 .VictoriaS_Text p {
   width: 95%;
-  margin: 0;
   text-align: left;
-  padding: 30% 8% 30% 4%;
+  padding:  3% 8% 3% 4%;
   margin: 7% auto 7% auto;
   font-family: 'News Cycle', sans-serif;
   font-weight: 400;
   line-height: 1.1rem;
   color: black;
-
 }
 .VictoriaS img {
   float: left;
-  margin: 0 0 0 30%;
-  max-width: 70%;
+  margin: 3% 0 3% 0%;
+  max-width: 67%;
   max-height:100%;
   padding: 0;
 }
@@ -716,7 +714,7 @@ strong {
 /* Resume Section - Formatting =====================================================
 =========*/
 .Resume {
-  height: 800px;
+/*  height: 800px;*/
   background-color: white;
   z-index: 15;
 }
@@ -726,7 +724,6 @@ strong {
 }*/
 .Experience {
   z-index: 15;
-  height: 615px;
   float: left;
   width: 50%;
   margin-right: 8%;
@@ -770,7 +767,7 @@ strong {
   background: url(../images/Background_Image_2.jpg)center center no-repeat;
   /*  background-color: #5DADB8;*/
   z-index: 23;
-  height: 780px;
+/*  height: 780px;*/
   position: relative;
 }
 .About_White {
@@ -939,10 +936,10 @@ h1#Spigner{
 
 #Title-Load2 {
 
-font-family: 'Loved by the King', cursive;
-font-size: 1rem;
-color: white;
-margin-top: 0.2%
+  font-family: 'Loved by the King', cursive;
+  font-size: 1rem;
+  color: white;
+  margin-top: 0.2%
 }
 
   h3 {
@@ -980,7 +977,10 @@ margin-top: 0.2%
   #BH1 h1 {
     width: 70%;
   }
-  div.title p {
+  .title {
+
+  }
+  .title p {
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: 100;
     text-align: center;
@@ -988,14 +988,14 @@ margin-top: 0.2%
     vertical-align: text-bottom;
 
   }
-  div.title p:first-child {
+  .title p:first-child {
     text-transform: uppercase;
     font-size: 1.5rem;
     line-height: 1.3rem;
     margin-bottom: 5px;
     padding: 25% 10% 0% 10%;
   }
-  div.title p:nth-child(2){
+  .title p:nth-child(2){
     font-size: 0.8rem;
     line-height: 0.7rem;
     margin-top: 0;
@@ -1223,11 +1223,129 @@ margin-top: 0.2%
   cursor: pointer;
 }
 
-/* Footer
+/* Mobile Optimization
 ================================================================ */
+@media only screen and (max-width: 900px) {
+.title p, .title p:first-child {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 850px) {
+  html {
+  }
+  .title p, .title p:first-child {
+    font-size: 1.1rem;
+  }
+.button-div {
+    margin:-5px 44% 13px 44%;
+    width:12%;
+  }
+.footer li {
+  font-size:0.5rem;
+  }
+  .Social {
+    padding-top:4px;
+  }
+  .footer {
+    height: 45px;
+  }
+  .About {
+    
+  }
+  .About_Text {
+    height: 215px;
+    width: 61%;
+    margin: 10% 0 0 0;
+    padding:0;
+  }
+  .About h1 {
+    font-size: 1.5rem;
+  }
+  .About h2 {
+    font-size: 1rem;
+  }
+  .About p {
+    font-size:0.7rem;
+    line-height: 1rem;
+  }
+  .About img {
+    margin: 4% 3% 1% 6%;
+    width: 30%;
+  }
+  .Resume h2 {
+    font-size: 1rem;
+  }
+  #Line {
+    left: 43.5%;
+  }
+  .BH_OOH p {
+    float:none;
+    width: 100%;
+    margin: 2% 3% 2% 3%;
+    padding: 0 6% 0 0;
+    text-align:center;
+  }
+  .BH-Video {
+    margin: 2% auto;
+    padding: 0;
+    text-align:center;
+    width:100%;
+  }
+  .SpeedStick p {
+    padding-right:0;
+  }
+  .SpeedStick img {
+    width: 60%;
+    padding-left: 0;
+    margin-left:0;
+  }
+  .SpeedStick_Text {
+    margin: 1.5% 0 2.5% 2%;
+    width:37%;
+  }
+  .VictoriaS img {
+    margin: 3% 0 3% 0%;
+    width:100%;
+    float:none;
+  }
+  .VictoriaS_Text {
+    width:100%;
+    margin:0 0 0 3%;
+    padding: 0;
+    float:left;
+  }
+  .VictoriaS_Text p {
+    margin: 2% auto 1% auto;
+    padding: 0;
 
-
-
+  }
+  .Icon  {
+    height:20px;
+    width:20px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  html {
+    font-size:16px;
+  }
+   .Icon  {
+    height:10px;
+    width:10px;
+  }
+@media only screen and (max-width: 500px) {
+  html {
+    font-size:12px;
+  }
+  
+  .Icon  {
+    height:5px;
+    width:5px;
+  }
+  }
+  @media only screen and (max-width: 400px) {
+  html {
+    font-size:10px;
+  }
 /* Navigation
 ================================================================ */
 
