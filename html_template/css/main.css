@@ -11,7 +11,10 @@
   clear: both;
   content: "";
 }
-
+ul {
+  margin-right:0;
+  margin-left:0;
+}
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -21,30 +24,43 @@
 
 /* Layout
 ================================================================ */
+body, html {
+  max-height:100%;
+}
+body {
+  background-color:white;
+/*  -webkit-transition: all 900ms ease-in-out;
+  -o-transition: all 900ms ease-in-out;
+  transition: all 900ms ease-in-out; */
+}
+
 .Section {
   -webkit-box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
   -moz-box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
   box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
-  display: none;
+  -webkit-transition: all 800ms ease-in-out;
+  -o-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
   overflow: hidden;
   z-index: 10;
-  margin: 3% auto 3% auto;
+  margin: 0 auto 0 auto;
+  clear:both;
 }
 
 div#Content{
-  margin: 60px auto;
-/*  position: absolute;*/
   z-index: 2;
   width: 100%;
-  margin: 12% auto;
+  margin: 12% auto 0 auto;
   padding: 0;
+  padding-bottom:20px;
+  position: relative;
 }
 
 div#Line{
   position: absolute;
-  top:114px;
+  top:80px;
   left:42%;
-  border-left: 1px solid black;
+  border-left: 1px dashed #189DAA;
   height: 100%;
   z-index: -1;
 }
@@ -60,10 +76,7 @@ header {
   height:1000px;
 }
 
-.load {
-  margin: 10% auto;
-  height:100%;
-}
+
 
 h1#Michelle {
   float: left;
@@ -80,17 +93,23 @@ header h2 {
   position: absolute;
   margin: 29px 188px;
   margin-bottom:0px;
-  padding-top: 0px;
+  padding-top: 0.5%;
 }
 
 /*Sections*/
 
-li.Section-Text{
-  margin:2% auto 2% auto;
+.Section-Text {
+  margin: 0.5% 40% 0.5% 40%;
   text-align: center;
-  padding: 3px 0 1px 0;
+  background-color: white;
+  padding: 3px auto 1px auto;
   width: 20%;
-  clear: both;
+  height: 52px;
+  clear:both;
+  overflow:hidden;
+  -webkit-transition: all 450ms ease;
+  -o-transition: all 450ms ease;
+  transition: all 450ms ease;
 }
 
 img.Icon {
@@ -102,28 +121,34 @@ img.Icon {
 }
 
 li.Section-Text p {
-  padding:0px;
   margin: 0px;
   text-align:left;
   padding-left: 75px;
   border-left: 1px solid black;
+  padding-top: 2%;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
-ul {
-  padding: 5% 0 5% 0;
+ul.Main_Sections {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left:0;
+  padding-right: 0;
+  -webkit-transition: all 550ms ease-in;
+  -o-transition: all 550ms ease-in;
+  transition: all 550ms ease-in;
 }
+
 
 /* Work Section - Formatting ==============================================================*/
 
 .Work {
-  display: none;
   clear: both;
   background: url(../images/Background_Image.jpg);
-/*  background: url(../images/computer.jpg) center center no-repeat;
-*/ 
   background-size: cover; 
-  z-index: 10;
   text-align: center;
-  height: 690px;
+  height: 650px;
   overflow: hidden;
 }
 .Work_TR {
@@ -176,7 +201,8 @@ div.Work_BC article {
 }
 
 .title {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   z-index: 20;
   background-color: rgba(24,157,170, 0.7);
@@ -184,11 +210,15 @@ div.Work_BC article {
   width: 100%;
   top: 0;
   left:0;
+  -webkit-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 article:hover .title, article:hover .title p {
-  display: block;
-  transition: all 3s ease-in-out;
+ visibility: visible;
+ opacity: 1;
+ cursor: pointer;
 }
 
 
@@ -200,57 +230,158 @@ article:hover .title, article:hover .title p {
   margin: 5% auto 1%;
 }
 
-/*Work Section - Pop Out Pages*/
-/*Layout===============================================*/
-.Work_Full, .Work_Full div {
-  display: none;
-}
-.Work_Full ul {
-  display: none;
-}
-.BH_OOH .active {
-  display: block;
-}
-.Work_Full li .active {
+/*Work Section - Pop Out Pages==================================================================*/
+.Work_Full li {
   display: inline block;
+  margin: 0;
+  padding: 0;
+  font-size: 0.5rem;
 }
-.Work_Full {
-  margin: 10% auto;
-  padding: 0% 15%;
-}
-.Work_Full div {
-  clear: both;
-}
-iframe {
+.button_div {
+  display: none;
+  width: 20%;
+  float: left;
+  cursor: pointer;
   text-align: center;
-  margin: 0% auto;
-  width: 100%;
-}
-#player {
-  margin: 1% 20%;
-}
-.BH_OOH,.BH_Wall,.HW,.SpeedStick,.Gatorade,.VictoriaS,.Challenge {
-  margin-bottom: 7%;
-  border: 1px solid gray;
+  opacity: 0.6;
+  margin: 4px 71.5% 1px 8.5%;
 }
 
-.Work_Full video {
+.button_div p {
+  padding: 0;
+  margin: 8px;
+  text-align: center;
+  display: none;
+  float: left;
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+
+.button_div img {
+  width: 21px;
+  height: 31px;
+  float: left;
+}
+
+#Previous, #Next {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.Work_Full {
+  margin:0% 0 0.5% 0;
+  padding: 0;
+  position: relative;
+  width:100%;
+  background-color:white;
+  height:100%;
+}
+
+.BH_OOH,.BH_Wall, .HW, .SpeedStick,.Gatorade,.VictoriaS,.Challenge {
+  margin-bottom: 7%;
+  height: 575px;
+  width: 100%;
+  display: none;
+  background-color:white;
+  overflow: hidden;
+}
+
+
+video {
   text-align: center;
   margin: 1% auto;
   width: 100%;
 
 }
 /*Bolthouse===============================================*/
+/*Outdoor =================================================================*/
+.BH_OOH {
 
+}
+.Section .BH_OOH h1 {
+  width: 70%;
+  margin: 0 15% 0 15%;
+  padding: 0;
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+  letter-spacing: 5px;
+  text-align: center;
+  line-height: 1.6rem;
+  transition: all 500ms ease-in-out;
+}
+.BH_OOH hr {
+  max-width: 100%;
+  margin: 1% 0;
+  border: 1px solid black;
+
+}
+.BH_OOH p {
+  float: left;
+  width: 32%;
+  margin: 2.5% 0 2.5% 5%;
+  padding: 10.1% 1%;
+  text-align: left;
+  color: white;
+  font-family: 'News Cycle', sans-serif;
+  color:black;
+  font-weight: 400;
+  line-height: 1.1rem;
+}
+.BH-Video {
+  float: left;
+  margin: 58px 2% 0 1%;
+  padding: 0;
+  width: 60%;
+  max-width:100%;
+  /*  text-align: center;*/
+}
+
+
+/*Wall ========================================================*/
 /*.BH_Wall {
   display: block;
-}*/
-.BH_Wall{
-  overflow:hidden;
+  }*/
+  .BH_Wall{
+    overflow: hidden;
+/*  background: url(../images/IMAGE-BG2.jpg);
+  background-size: 1100px 100%;
+  background-repeat: no-repeat;
+  border:none;*/
+  /*  z-index:10;*/
+
 }
-.BH_Wall img {
-  max-width: 100%;
+#BH_Wall_Slider2, #BH_Wall_Slider3 {
+  display:none;
 }
+#BH_Wall_Slider1 {
+  position: relative;
+  width: 100%;
+}
+#BH_Wall_Slider1 h1{
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: -2.1%;
+  color: white;
+  padding: 2%;
+  letter-spacing: 0.4rem;
+  width: 100%;
+  background-color: rgba(135,175,32,0.4);
+
+}
+#BH_Wall_Slider1 p {
+  padding: 5px 12% 8px 12%;
+  margin-bottom: 0;
+}
+#BH_center{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .BH_Mid {
   float: left;
   width: 49.7%;
@@ -262,32 +393,210 @@ iframe {
 #BH_Mid3 {
   margin:0.5% 2% 0 0;
 }
-#BH_Wall_2nd_P {
+.BH_Wall_Text {
+  margin: 2px auto;
+  width:90%;
+  margin-right: 4%;
+}
+.BH_Wall_Text article {
   float: left;
-  width: 46%;
-  vertical-align: center;
+  width: 31%;
+  height: 177px;
   text-align: left;
-  margin-left: 2%;
-  padding: 3.5% 0;
+  margin: 7px 0 auto 2%;
+  padding: 0 2% 20px 0;
+  border-right: 1px solid rgb(135,175,32);
+  /*  height: 163px;*/
+
+}
+.BH_Wall_Text article:first-child {
+
+  padding: 0 2% 20px 0;
+  margin:8px 0 auto 0;
+}
+.BH_Wall_Text article:last-child {
+  border-right:none;
+  padding: 0 0 20px 0;
+  margin:8px 0 auto 2%;
+}
+.BH_Wall_Text p {
+  text-align: left;
+}
+/*Hotwire===============================================*/
+
+#HW_Full {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  height: 575px;
+  width: 100%;
+  clear:both;
+  overflow: hidden;
+
+}
+.Section .HW h1 {
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 2% 2% 2%;
+  margin: 0;
+  color: black;
+  letter-spacing: 0.4rem;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: rgba(255,255,255,0.4);
+/*  width: 50%;
+  margin: 0 auto;
+  border-bottom: 1px solid black;*/
+}
+.HW hr {
+  max-width: 100%;
+  margin: 0 0;
+  border: 1px solid black;
+}
+.HW_Full_Text {
+
+  width: 30%;
+  padding: 0;
+  float: left;
+  margin: 4.5% 0 4.5% 3%;
+}
+.HW p {
+  width: 95%;
+  margin: 0;
+  text-align: left;
+  padding: 18% 4% 19% 4%;
+  font-family: 'News Cycle', sans-serif;
+  font-weight: 400;
+  line-height: 1.1rem;
+  color: black;
+}
+
+.HW img {
+  float: left;
+  margin: 0 2% 0 1%;
+  width: 60%;
+  padding: 0;
 }
 
 /*Speed Stick===============================================*/
 .SpeedStick {
   clear: both;
-  margin-bottom: 6%;
+  margin:2% auto;
+  /*  z-index:30;*/
+}
+.Section .SpeedStick h1 {
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 0;
+  margin: 0;
+  color: black;
+  letter-spacing: 0.4rem;
+  width: 100%;
+  text-transform: uppercase;
+}
+.SpeedStick hr {
+  max-width: 100%;
+  margin: 1% 0;
+  border: 1px solid black;
 }
 .SpeedStick img {
   float: left;
-  width: 39%;
-  padding-top: 5%;
+  width: 48%;
+  margin: 4.5% 0 4.5% 1%;
+  text-align: right;
+}
+.SpeedStick_Text {
+  width: 45%;
+  padding: 0;
+  float: left;
+  margin: 4.5% 0 4.5% 3%;
 }
 .SpeedStick p {
+  width: 90%;
   float: left;
-  padding-left: 3%;
-  width: 58%;
+  margin: 0;
+  padding: 10px 8% 10px 8%; 
+  text-align: left;
+  color: black;
+  font-family: 'News Cycle', sans-serif;
+  font-weight: 400;
+  line-height: 1.1rem;
 }
 
 /*Gatorade===============================================*/
+.Gatorade {
+
+}
+.Executions {
+  display:none;
+}
+#GG_Image /*#Gatorade_1*/ {
+  float: left;
+  max-width: 60%;
+  margin: 7px 0 0 4%;
+  text-align: right;
+}
+.Section .Gatorade h1 {
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 0;
+  margin: 0;
+  color: black;
+  letter-spacing: 0.4rem;
+  width: 100%;
+  text-transform: uppercase;
+}
+.Gatorade hr {
+  max-width: 100%;
+  margin: 1% 0;
+  border: 1px solid black;
+}
+.Gatorade_Text {
+  float: left;
+  width: 30%;
+  margin: 3px 0 0 4%;
+  font-family: 'News Cycle', sans-serif;
+  font-weight: 400;
+  line-height: 1.3rem;
+}
+.Gatorade_Text p {
+  font-family: 'News Cycle', sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  padding-right: 4%;
+  tex-talign: left;
+}
+.Gatorade .team {
+  clear:both;
+  text-align: left;
+  font-size: 0.7rem;
+  text-align: left;
+  padding: 0 2%;
+}
+#View_More {
+  clear: both;
+  text-align: center;
+  width: 51%;
+  padding: 3%;
+  margin: 30px auto 30px auto;
+  background-color: rgba(96,196,190,1);
+  color: white;
+  text-transform: uppercase;
+  -webkit-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  transition: all 600ms ease;
+  border: 2px solid white;
+
+}
+#View_More:hover {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid rgba(96,196,190,1);
+  color: rgba(96,196,190,1);
+}
 
 /*Challenge===============================================*/
 .Challenge img{
@@ -298,32 +607,116 @@ iframe {
 .Challenge p {
   margin: 1% 10%;
 }
+/*Victoria's Secret ===========================================================*/
+.VictoriaS {
+
+}
+.Section .VictoriaS h1 {
+  width: 70%;
+  margin: 3% 15% 0 15%;
+  padding: 0;
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+  letter-spacing: 5px;
+  text-align: center;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+}
+.VictoriaS hr{
+  max-width: 100%;
+  margin: 1% 0 0 0;
+  border: 1px solid black;
+}
+.VictoriaS_Text {
+  float: left;
+  width: 30%;
+  padding: 0;
+  float: left;
+  margin: 13% 4% 13% 3%;
+  z-index:40;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.VictoriaS_Text p {
+  width: 95%;
+  margin: 0;
+  text-align: left;
+  padding: 30% 8% 30% 4%;
+  margin: 7% auto 7% auto;
+  font-family: 'News Cycle', sans-serif;
+  font-weight: 400;
+  line-height: 1.1rem;
+  color: black;
+
+}
+.VictoriaS img {
+  float: left;
+  margin: 0 0 0 30%;
+  max-width: 70%;
+  max-height:100%;
+  padding: 0;
+}
+/*CHallenge*/
+.Challenge {
+  z-index:70;
+}
 
 /*Font Styles ===============================================*/
-.Work_Full html {
-  font-size: ;
+html {
+  font-size: 16px;
 }
-.Work_Full h1 {
+.Section .Work_Full h1 {
   font-family: 'Quicksand', sans-serif;
-    font-weight: 300;
-    font-size: 1.8rem;
-    text-align: center
+  font-weight: 300;
+  font-size: 1.6rem;
+  text-align: center;
+  border: none;
+  padding-top: 0;
+  margin-top: 0;
 }
 .Work_Full h2 {
   font-family: 'Quicksand', sans-serif;
-    font-weight: 300;
-    font-size: 1.4rem;
-    text-align: left;
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-align: left;
 }
 .Work_Full p {
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 
-.Work_Full .active{
+.active{
   color: blue;
 }
+#View_More {
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+strong {
+  text-transform: bold;
+}
+/*Animation Classes==================================================*/
+
+
+.slideIn {
+  display: block;
+  /*opacity: 1;
+  visibility: visible;*/
+}
+
+.slideIn .Back {
+  display: block;
+}
+.slideOut {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* Resume Section - Formatting =====================================================
 =========*/
 .Resume {
@@ -331,14 +724,17 @@ iframe {
   background-color: white;
   z-index: 15;
 }
-
+/*.Resume_Border {
+    border-top: 3px solid #D7EAE5;
+  border-bottom: 3px solid #D7EAE5;
+}*/
 .Experience {
   z-index: 15;
-  height: 545px;
+  height: 615px;
   float: left;
   width: 50%;
   margin-right: 8%;
-  padding-bottom: 578px;
+  padding: 26px;
   border-bottom: 1px solid #384544;
 }
 .Experience article {
@@ -349,6 +745,7 @@ iframe {
   width: 20%;
   margin-left: 13%;
   margin-right: 4%;
+  padding-top: 26px;
   border-bottom: 1px solid #384544;
 }
 .Education article{
@@ -375,7 +772,7 @@ iframe {
 ================================================================ */
 .About {
   background: url(../images/Background_Image_2.jpg)center center no-repeat;
-/*  background-color: #5DADB8;*/
+  /*  background-color: #5DADB8;*/
   z-index: 23;
   height: 780px;
   position: relative;
@@ -392,10 +789,10 @@ iframe {
   height: 53%;
 /*  border: 3px solid #EF6764;
 */  margin: 4% 3% 1% 16%;
-  overflow: hidden;
-  position: relative;
-  border: 4px solid #40ABB0;
-  padding: 1%;
+overflow: hidden;
+position: relative;
+border: 4px solid #40ABB0;
+padding: 1%;
 }
 .About_Text {
   float: left;
@@ -428,9 +825,9 @@ iframe {
 }
 
 .About p {
-margin: 0;
-padding: 0;
-color: black;
+  margin: 0;
+  padding: 0;
+  color: black;
 }
 
 .Fun-Stuff p {
@@ -444,11 +841,78 @@ color: black;
   top: 27%;
   left: 46%;
 }
+/*Footer =========================================================*/
 
+.footer ul {
+  margin: 0.4% 2% 0 2%;
+  padding: 0;
+}
+.Contact li {
+  display: inline-block;
+  text-align: left;
+  color: black;
+  margin-left: 1%;
+}
+.Cont li:last-child {
+  margin-right: 2%;
+}
+.Contact {
+  margin-right: 0;
+  width: 56%;
+  float:left;
+}
+.Social li {
+  display: inline-block;
+  text-align:left;
+  margin-left: 1%;
+}
+.Social li:first-child {
+  margin-left: 2%;
+}
+.Social {
+  margin-left:0;
+  float:right;
+  width: 20%;
+  text-align: right;
+}
+.footer, footer {
+  height: 60px;
+  background-color:white;
+    width:100%;
+}
+.footer p {
+  clear:both;
+  margin:0 0 0 2%;
+  padding:0 0 0 5px;
+}
+.footer img {
+  height:15px;
+  width:15px;
+}
+footer {
+  position: fixed;
+  left:0;
+  bottom:0;
+  border-top: 1px solid gray;
+  z-index: 1;
+}
 /* Text Styles
 ================================================================ */
 html {
   font-size: 20px;
+  height:100%;
+}
+.footer li {
+  font-size: 0.7rem;
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 300;
+  color: gray;
+}
+.footer p {
+  font-size: 0.6rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;;
+  color:gray;
 }
 h1 {
   font-family: 'Quicksand', sans-serif;
@@ -464,6 +928,7 @@ h1#Michelle{
   color: white;
   font-family: 'Advent Pro', sans-serif;
   font-weight: 100;
+  margin-top: -23px;
 }
 
 h1#Spigner{
@@ -477,153 +942,189 @@ h1#Spigner{
 }
 
 #Title-Load2 {
-/*  font-family: 'Fira Sans', sans-serif;
-  font-weight: 300;*/
-  font-family: 'Loved by the King', cursive;
-  font-size: 1rem;
-  color: white;
+
+font-family: 'Loved by the King', cursive;
+font-size: 1rem;
+color: white;
+margin-top: 0.2%
 }
 
-/*#Title-Load p {
-  visibility: visible;
-  opacity: 1;
- 
-  margin: 0 auto;
-}*/
-h3 {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
-  font-size: 0.8rem;
-  margin-top: 20px;
-}
+  h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin-top: 20px;
+  }
 
-ul {
-  list-style-type: none; 
-}
+  ul {
+    list-style-type: none; 
+  }
 
-li, li p {
-  font-family: 'Advent Pro', sans-serif;
-  font-weight: 100;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  list-style: none;
-}
-.Section h1 {
-  font-family: 'Advent Pro', sans-serif;
-  font-weight: 100;
-  font-size: 2.0rem;
-  text-transform: uppercase;
-  z-index: 200;
-  position: relative;
-  padding: 0;
-  margin: 2% auto -3% auto;
-  border-bottom: 1px solid black;
-  width: 20%;
-  text-align: center;
-}
-div.title p {
-  font-family: 'Alegreya Sans SC', sans-serif;
-  font-weight: 100;
-  text-align: center;
-  color: white;
-  vertical-align: text-bottom;
+  li, li p {
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 100;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    list-style: none;
+  }
+  .Section h1 {
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 100;
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    z-index: 200;
+    position: relative;
+    padding: 0;
+    width: 20%;
+    margin: 2% auto -3% auto;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+  /*Correcting for Bolthouse OOH */
+  #BH1 h1 {
+    width: 70%;
+  }
+  div.title p {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    color: white;
+    vertical-align: text-bottom;
 
-}
-div.title p:first-child {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  line-height: 1.3rem;
-  margin-bottom: 5px;
-  padding: 25% 10% 0% 10%;
-}
-div.title p:nth-child(2){
-  font-size: 0.8rem;
-  line-height: 0.7rem;
-  margin-top: 0;
-  padding: 0 10% 25% 10%;
-}
+  }
+  div.title p:first-child {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 1.3rem;
+    margin-bottom: 5px;
+    padding: 25% 10% 0% 10%;
+  }
+  div.title p:nth-child(2){
+    font-size: 0.8rem;
+    line-height: 0.7rem;
+    margin-top: 0;
+    padding: 0 10% 25% 10%;
+  }
 
-.Resume p {
-  font-size: 0.6rem;
-  font-family: 'Quicksand', sans-serif;
-}
-.Resume h2 {
-  text-align: left;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  color: #4B918D;
-  padding: 0;
-}
-.Experience h2 {
-  width: 55%;
-  text-align: center;
-  background-color: #189DAA;
-  color: white;
-  padding: 5px;
-}
-.Education h2{
-  width: 100%;
-  text-align: center;
-  background-color: #189DAA;
-  color: white;
-  padding: 5px;
-}
-.Education p {
-  text-align: right
-}
-.Resume strong {
-  font-size: 0.8rem;
-}
-.Education strong {
-  text-transform: uppercase;
-}
-.Skills h2 {
-  text-align: center;
-}
-#PDF{
-  text-align: right;
-  text-transform: uppercase;
-}
-.About h2 {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  text-align:center;
-}
-.Fun-Stuff h2 {
-  font-size: 1.2rem;
-}
-.About p {
-  font-family: 'Lato', sans-serif;
-  text-transform: capitalize;
-  font-weight: 300;
-  font-size: 0.9rem;
-  color: black;
-  line-height: 1.5rem;
-  text-align: center;
-}
-.Fun-Stuff p {
-  line-height: 1.5rem;
-}
+  .Resume p {
+    font-size: 0.6rem;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .Resume h2 {
+    text-align: left;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #4B918D;
+    padding: 0;
+  }
+  .Experience h2 {
+    width: 55%;
+    text-align: center;
+    background-color: #189DAA;
+    color: white;
+    padding: 5px;
+  }
+  .Education h2{
+    width: 100%;
+    text-align: center;
+    background-color: #189DAA;
+    color: white;
+    padding: 5px;
+  }
+  .Education p {
+    text-align: right
+  }
+  .Resume strong {
+    font-size: 0.8rem;
+  }
+  .Education strong {
+    text-transform: uppercase;
+  }
+  .Skills h2 {
+    text-align: center;
+  }
+  #PDF{
+    text-align: right;
+    text-transform: uppercase;
+  }
+  .About h2 {
+     font-family: 'Advent Pro', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align:center;
+  }
+  .Fun-Stuff h2 {
+    font-size: 1.2rem;
+  }
+  .About p {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: black;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+  .Fun-Stuff p {
+    line-height: 1.5rem;
+  }
 
 /* Classes
 ================================================================ */
-
+.Mini_Nav {
+  position: static;
+  margin: 0;
+  z-index:2;
+}
+.Mini_Nav #Michelle, .Mini_Nav #Spigner, .Mini_Nav #Title-Load2 {
+  font-size: 0.6rem;
+  z-index: 3;
+  padding: 0;
+  margin-top: -10px;
+  margin: 0;
+  margin-left: 3%;
+  line-height: 0.65rem;
+}
+.Mini_Nav #Title-Load2 {
+  margin-left: 176px;
+  margin-top: 10px;
+}
 
 .Closed .Icon, .Closed {
   display: none;
-}
 
+}
+.Open {
+  display: block;
+}
 .Closed .Work_TR{
   margin-top: 1%;
 }
-.Collapse {
+.Collapse .Main_Sections, .Collapse #Title-Load, .Collapse .Work  {
   padding-top: 0;
   margin-top: 0;
 }
+.Collapse #Title-Load{
+  padding: 0;
+  margin: 0;
+}
+.Collapse #Content {
+  margin-top: 8%;
+  padding-top: 0;
+}
+.Content_Collapse #Content {
+  margin-top: 0;
+}
+/*To shrink nav even further when we look at all of the work*/
 /*To change the size of the text in the header upon page load.*/
+.load {
+  margin: 10% auto;
+  height:100%;
+}
+/*When the work full */
 .PageLoad {
   background-color: rgb(86,87,87);
 }
@@ -642,7 +1143,7 @@ div.title p:nth-child(2){
 #Title-Load li {
   opacity: 0;
   /*ont-family: 'Fira Sans', sans-serif;*/
-/*  font-weight: 300;*/
+  /*  font-weight: 300;*/
   font-family: 'Loved by the King', cursive;
   text-transform: lowercase;
   font-size: 2rem;
@@ -661,46 +1162,64 @@ div.title p:nth-child(2){
   list-style: none;
   padding:30px;
 }
+.Section_Closed {
+  height:0px;
+  margin-top: 0;
+  margin-bottom:0;
+}
+
 
 /*Animations ====================================================*/
 /*#Thinker {
   transition: all 400ms ease-in-out;
-}*/
-
-.fade-In {
-  -webkit-animation: fadein 1000ms ease-in-out 600ms;
-  -moz-animation: fadein 1000ms ease-in-out 600ms;
-  -ms-animation ease-in 1s: fadein 1000ms ease-in-out 600ms;
-  -o-animation: fadein 1000ms ease-in-out 600ms;
-  animation: fadein 1000ms ease-in 600ms;
+  }*/
+.fade-In-Faster {
+      -webkit-animation: fadein 900ms ease-in-out 600ms;
+    -moz-animation: fadein 900ms ease-in-out 600ms;
+    -ms-animation ease-in 1s: fadein 900ms ease-in-out 600ms;
+    -o-animation: fadein 900ms ease-in-out 600ms;
+    animation: fadein 900ms ease-in 600ms;
 }
+  .fade-In {
+    -webkit-animation: fadein 1000ms ease-in-out;
+    -moz-animation: fadein 1000ms ease-in-out;
+    -ms-animation ease-in 1s: fadein 1000ms ease-in-out;
+    -o-animation: fadein 1000ms ease-in-out;
+    animation: fadein 1000ms ease-in-out;
+  }
 
-@keyframes fadein {
+  @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-}
+  }
 
-/* Firefox < 16 */
-@-moz-keyframes fadein {
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-}
+  }
 
-@-webkit-keyframes fadein {
+  @-webkit-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-}
+  }
 
-@-ms-keyframes fadein {
+  @-ms-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-}
+  }
 
-@-o-keyframes fadein {
+  @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+  }
+.Section-Text:hover, .Section-Text p:hover {
+  font-weight:400;
+  font-size: 1.6rem;
+  color: #159DAA;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
 }
-
 
 /* Footer
 ================================================================ */

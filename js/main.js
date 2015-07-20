@@ -7,22 +7,20 @@ $(document).ready(function(){
 	$('#nav-bar').addClass('load');
 	$('#Title-Load').addClass('Open');
 	// Show text - thinker - for 1 second
-	$('.Thinker').delay(500).queue(function(){
+	$('.Thinker').delay(200).queue(function(){
 		$(this).addClass('fade-In');
 	});
 	$('.Designer').delay(1500).queue(function(){
 		$(this).addClass('fade-In');
 	});
-	// $('.Developer').delay(2500).queue(function(){
-	// 	$(this).addClass('fade-In');
-	// });
-	$('.Strategist').delay(2500).queue(function(){
+	
+	$('.Strategist').delay(2800).queue(function(){
 		$(this).addClass('fade-In');
 	});
-	$('body').delay(5000).queue(function(){
+	$('body').delay(3900).queue(function(){
 		$('body').removeClass('PageLoad', 'slow');
 		$('header').animate(
-			{height: "112px", opacity:0.6}, 
+			{height: "80px", opacity:0.6}, 
 			"slow");
 		$('#Content, #Line, #Title-Load2').removeClass('Closed');
 		$('#nav-bar').removeClass('load');
@@ -37,122 +35,128 @@ function addFadeIn(){
 	$(this).addClass('fade-In');
 }
 
-var slideToPosition = $('body').position();
-// $('header').animate({top:"+" + slideToPos.top},200);
-// when user scrolls 
-	// Add class Shrink to Nav (shrink nav, change text and background color)
-	// Fix to top  of the screen
-
-// when user hovers over Work Image or Icon
-	// change mouse cursor to hand
-// when the user clicks on Work Image or Icon
-	// Close all open divs
-	// Slide down (Slide Toggle) Work div
-	// Add Open class to Work Image
-	// Add Open Class to Work Text 
-// wwhen user clicks on project
-	// Hide Work Div 
-	// Display corresponding project page
-
-// when user hovers over Resume Image or Icon
-	// change mouse cursor to hand
-// when user clicks on Resume Image or Icon
-	// Close all open Divs
-	// Clear Open class from all images
-	// Clear open class from all text
-	// Slide Down (Slide Toggle) Resume Div
-	// Add Open class to Resume Image
-	// Add Open class to Resuem Text
+// var slideToPosition = $('body').position();
 
 // when user clicks View Resume PDF text
 	// Open PDF in separate page
 
-// when user hovers over About Image or Icon
-	// change mouse cursor to hand
-// when user clicks on About Image or Icon
-	// close all open Divs
-	// Clear Open class from all images
-	// Clear Open class from all text
-	// slide down (slide toggle) About Div
-	// Add Open class to Resume Image
-	// Add Open class to Resume Text
 
 // when user hovers over Email Address
 	// change mouse cursor to hand
 // when user clicks Email Address in footer
 	// Open email in user's email program
 
-// $('li.Work-Icon').children('p').on('click', function (){
- 
-// 	$('.Work').slideToggle();
-// 	// OpenDiv ();
-// });
+// When the user clicks the work icon - the text or the icon
+var scrollHeight = $(window).scrollTop();
 
-// $('#Line').height($(document).height());
 $('#Work-Icon').children('p','img').on('click', function (){
-	// $('.Resume').slideUp();
-	// $('.About').slideUp();
-	$('.Work').slideToggle(400);
-
+	// Show the work div.
+	$('.Work').removeClass('Section_Closed');
 });
-
+// When the user clicks the resume icon - the text or the icon
 $('#Resume-Icon').on('click', function (){
-	// $('.Work').slideUp();
-	// $('.About').slideUp();
-	$('.Resume').slideToggle(400);
+	// Pulling difference from top to the div
+	// $(window).on('scroll', function (){
+	// var scrollHeight = parseFloat($(window).scrollTop());
+	// console.log(scrollHeight);
+	// });
+	// var distanceFromTop = parseFloat($('.Resume').offset().top);
+	// var positionHere = distanceFromTop += scrollHeight;
+	// $(window).animate({
+	// 	backgroundPositionY: 'distanceFromTop'
+	// });
+	// Show the resume div
+	$('.Resume').removeClass('Section_Closed');
+	// $(window).scroll(scrollToElement);
+	// // $(window).scrollTop(positionX, positionY);
+	// console.log(positionHere);
+	// location.hash = 'positionHere';
+	 // $('html, body').animate({
+  //       scrollTop: $(positionHere).offset().top
+  //   }, 2000);
+	// Move the resume div to the top of the page below the header
+	
 });
 
+
+// function name
+
+
+// When the user clicks on the about icon or text
 $('#About-Icon').on('click', function
 	(){
-	$('.Resume').slideUp();
-	$('Work').slideUp();
-	$('.About').slideToggle(400);
+	// show the about section 
+	$('.About').removeClass('Section_Closed');
 });
 
-
-// when the user clicks on the section-text class
+// [hides the icon abve the open section]
+// when the user clicks on the section-text 
 $('.Section-Text').on('click',function (){
-	// Hide Icon image (class Section-Icon)
-	// Hide Section text (class Section-Title)
-	$(this).addClass('Closed').delay(2000);
-	$('#Line').addClass('Closed').delay(2000);
-	$('ul, li').addClass('Collapse').delay(2000);
+	// Hide the icon and text
+	$(this).addClass('Section_Closed').delay(2000);
+	// Hide vertical line
+	$('#Line').addClass('Section_Closed').delay(2000);
+	// Shift top margin of Work div up so there is less white space at the top.
+	$('body').addClass('Collapse').delay(2000);
 });
 
+// [return the user to list view]
+// When the user clicks on the header within each section
 $('.Section h1').on('click', function (){
-	$('.Section-Text').removeClass('Closed');
-	$('#Line').removeClass('Closed', 2000);
-	$('ul, li').removeClass('Collapse', 2000);
-	$('.Section').slideUp(400);
-	$('.Section-Div-Title').hide();
+	// Unhide the section text and icon
+	$('.Section-Text').removeClass('Section_Closed');
+	// Bring the vertical line back into view
+	$('#Line').removeClass('Section_Closed');
+	// Add the top margin back to the work div, ul, li units
+	$('body').removeClass('Collapse');
+	// Whatever section is open, close it.
+	$('.Section').addClass('Section_Closed');
+	// Hide the 
+	// $('.Section-Div-Title').hide();
 });
 	
+// When the user clicks on a work icon.
+$('.title').on('click', function(){
+	var matchingDiv = $(this).data('section');
+	console.log(matchingDiv);
+	// // Pull the data dash
+	$('.Work_Menu').hide();
+	// // Hide the Work Section
+	$("." + matchingDiv).addClass('slideIn');
+	console.log("." + matchingDiv);
+	$('.button_div').addClass('slideIn');
+	// // Show the corresponding div section
+	// Shrink nav and adhere to top
+	$('header').animate(
+			{height: "45px"});
+	$('header').addClass('Mini_Nav');
+	$('body').addClass('Content_Collapse');
+});
+
+// When the user clicks the back button
+$('.button_div').on('click', function (){
+	// Hide the project div
+	$('.project').removeClass('slideIn');
+	// Show the full work menu
+	$('.Work_Menu').show();
+	// Hide the back button
+	$('.button_div').removeClass('slideIn');
+	$('header').removeClass('Mini_Nav');
+	$('header').animate(
+			{height: "80px"});
+	$('body').removeClass('Content_Collapse');
+});
+	
+// function myFunction() {
+//     alert("Hello! I am an alert box!");
+// }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// code for BH_Wall photo transition
+// when the user clics the view more button (#View_More)
+	// Add 1 to the current position
+	// Change the image source to the one that coordinates with the current position 
+	// Display the next and back buttons 
 
 
 
