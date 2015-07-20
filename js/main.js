@@ -40,7 +40,7 @@ function addFadeIn(){
 // When the user clicks the work icon - the text or the icon
 var scrollHeight = $(window).scrollTop();
 
-$('#Work-Icon').children('p','img').on('click', function (){
+$('#Work-Icon').on('click', function (){
 	// Show the work div.
 	$('.Work').removeClass('Section_Closed');
 });
