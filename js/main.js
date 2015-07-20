@@ -26,7 +26,7 @@ $(document).ready(function(){
 		$('body').removeClass('PageLoad', 'slow');
 		// Shrink the header from full screen and add opcity
 		$('header').animate(
-			{height: "80px", opacity:0.6}, 
+			{height: "80px", opacity:0.7}, 
 			"slow");
 		// Open the main content, show line and the small "strategist"
 		$('#Content, #Line, #Title-Load2').removeClass('Closed');
