@@ -1,46 +1,56 @@
 // when the page loads, nav to fill screen
 $(document).ready(function(){
-	// // Remove uls and  line
+	// Remove main content, main nav and center line
 	$('#Content, #Line, #Title-Load2').addClass('Closed');
-	// // Expand Nav to Fill Screen
+	// Make background dark grey
 	$('body').addClass('PageLoad');
+	// Place the nave at the center at teh screen.
 	$('#nav-bar').addClass('load');
+	// Display the beginning titles
 	$('#Title-Load').addClass('Open');
 	// Show text - thinker - for 1 second
 	$('.Thinker').delay(200).queue(function(){
 		$(this).addClass('fade-In');
 	});
+	// Show designer for one second
 	$('.Designer').delay(1500).queue(function(){
 		$(this).addClass('fade-In');
 	});
-	
+	// Show text - strategist - for one second
 	$('.Strategist').delay(2800).queue(function(){
 		$(this).addClass('fade-In');
 	});
+	// After a few seconds of delay run function
 	$('body').delay(3900).queue(function(){
+		// Remove pageload from body 
 		$('body').removeClass('PageLoad', 'slow');
+		// Shrink the header from full screen and add opcity
 		$('header').animate(
 			{height: "80px", opacity:0.6}, 
 			"slow");
+		// Open the main content, show line and the small "strategist"
 		$('#Content, #Line, #Title-Load2').removeClass('Closed');
+		// Remove the load class to turn off the 100px 
 		$('#nav-bar').removeClass('load');
 	});
 
 });
+// When you click on name in nav
 $('#Michelle').on('click',function(){
+	// Reload page - to allow for a return to the "home"page without hitting refresh
 	location.reload();
 });
 
 // When the user clicks the work icon - the text or the icon
-var scrollHeight = $(window).scrollTop();
 
+// When the user clicks on the Work text or icon
 $('#Work-Icon').on('click', function (){
 	// Show the work div.
 	$('.Work').removeClass('Section_Closed');
 });
-
+// When the user clicks on teh Resume text or icon
 $('#Resume-Icon').on('click', function (){
-
+	// Show the resume div
 	$('.Resume').removeClass('Section_Closed');
 });
 

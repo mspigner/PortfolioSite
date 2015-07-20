@@ -1134,10 +1134,11 @@ li, li p {
   margin-top: 8%;
   padding-top: 0;
 }
+
 .Content_Collapse #Content {
   margin-top: 0;
 }
-/*To shrink nav even further when we look at all of the work*/
+
 /*To change the size of the text in the header upon page load.*/
 .load {
   margin: 10% auto;
