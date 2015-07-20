@@ -761,7 +761,7 @@ strong {
 /* About Section
 ================================================================ */
 .About {
-  background: url(../images/Background_Image_2.jpg)center center no-repeat;
+  background: url(../images/Background_Image.jpg)center center no-repeat;
   z-index: 23;
   position: relative;
 }

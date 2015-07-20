@@ -31,12 +31,6 @@ $('#Michelle').on('click',function(){
 	location.reload();
 });
 
-function addFadeIn(){
-	$(this).addClass('fade-In');
-}
-
-
-
 // When the user clicks the work icon - the text or the icon
 var scrollHeight = $(window).scrollTop();
 
@@ -48,8 +42,6 @@ $('#Work-Icon').on('click', function (){
 $('#Resume-Icon').on('click', function (){
 
 	$('.Resume').removeClass('Section_Closed');
-
-	
 });
 
 
