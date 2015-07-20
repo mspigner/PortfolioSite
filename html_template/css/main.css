@@ -3,8 +3,7 @@
  ========================================================================== */
  * {
   box-sizing: border-box;
-/*  border: 1px solid black;
-*/}
+}
 
 .clearfix:after {
   display: table;
@@ -47,7 +46,7 @@ body {
   clear:both;
 }
 
-div#Content{
+#Content{
   z-index: 0;
   width: 100%;
   margin: 12% auto 0 auto;
@@ -56,7 +55,7 @@ div#Content{
   position: relative;
 }
 
-div#Line{
+#Line{
   position: absolute;
   top:80px;
   left:42%;
@@ -78,13 +77,14 @@ header {
 
 
 
-h1#Michelle {
+#Michelle {
   float: left;
   width: 130px;
+  margin-left:9%;
 }
 
-h1#Spigner{
-  margin: 24px 40px 0px 40px;
+#Spigner{
+  margin: 0% 2% 6% 9%;
   width: 130px;
   padding: 0px;
 }
@@ -101,7 +101,6 @@ header h2 {
 .Section-Text {
   margin: 0.5% 40% 0.5% 40%;
   text-align: center;
-  background-color: white;
   padding: 3px auto 1px auto;
   width: 35%;
   height: 52px;
@@ -331,21 +330,12 @@ video {
   padding: 0;
   width: 60%;
   max-width:100%;
-  /*  text-align: center;*/
 }
 
 
 /*Wall ========================================================*/
-/*.BH_Wall {
-  display: block;
-  }*/
   .BH_Wall{
     overflow: hidden;
-/*  background: url(../images/IMAGE-BG2.jpg);
-  background-size: 1100px 100%;
-  background-repeat: no-repeat;
-  border:none;*/
-  /*  z-index:10;*/
 
 }
 #BH_Wall_Slider2, #BH_Wall_Slider3 {
@@ -402,7 +392,7 @@ video {
   margin: 7px 0 auto 2%;
   padding: 0 2% 20px 0;
   border-right: 1px solid rgb(135,175,32);
-    height: 163px;
+  height: 163px;
 
 }
 .BH_Wall_Text article:first-child {
@@ -440,9 +430,6 @@ video {
   width: 100%;
   text-transform: uppercase;
   background-color: rgba(255,255,255,0.4);
-/*  width: 50%;
-  margin: 0 auto;
-  border-bottom: 1px solid black;*/
 }
 .HW hr {
   max-width: 100%;
@@ -478,7 +465,6 @@ video {
 .SpeedStick {
   clear: both;
   margin:2% auto;
-  /*  z-index:30;*/
 }
 .Section .SpeedStick h1 {
   font-family: 'Jura', sans-serif;
@@ -699,8 +685,6 @@ strong {
 
 .slideIn {
   display: block;
-  /*opacity: 1;
-  visibility: visible;*/
 }
 
 .slideIn .Back {
@@ -714,78 +698,71 @@ strong {
 /* Resume Section - Formatting =====================================================
 =========*/
 .Resume {
-/*  height: 800px;*/
   background-color: white;
   z-index: 15;
+  margin-bottom: 10px;
 }
-/*.Resume_Border {
-    border-top: 3px solid #D7EAE5;
-  border-bottom: 3px solid #D7EAE5;
-}*/
-.Experience {
-  z-index: 15;
-  float: left;
-  width: 50%;
-  margin-right: 8%;
-  padding: 26px;
-  border-bottom: 1px solid #384544;
-}
-.Experience article {
-  margin-bottom: 4%;
-}
-.Education {
-  float: left;
-  width: 20%;
-  margin-left: 13%;
-  margin-right: 4%;
-  padding-top: 26px;
-  border-bottom: 1px solid #384544;
-}
-.Education article{
-  margin-bottom: 13%;
-}
-.Resume>h2{
-  text-align: left;
-  clear: both;
-  margin: 0% 8%;
-  padding: 0;
-}
+  .Experience {
+    z-index: 15;
+    float: left;
+    width: 50%;
+    margin-right: 8%;
+    padding: 26px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #384544;
+  }
+  .Experience article {
+    margin-bottom: 4%;
+  }
+  .Education {
+    float: left;
+    width: 20%;
+    margin-left: 13%;
+    margin-right: 4%;
+    padding-top: 26px;
+    border-bottom: 1px solid #384544;
+  }
+  .Education article{
+    margin-bottom: 13%;
+  }
+  .Resume>h2{
+    text-align: left;
+    clear: both;
+    margin: 0% 8%;
+    padding: 0;
+  }
 
-.Skills {
-  clear: both;
-  text-align: center;
-  padding-top: 20px;
-}
-#PDF {
-  margin-right: 8%;
-}
+  .Skills {
+    clear: both;
+    text-align: center;
+    padding-top: 20px;
+  }
+  #PDF {
+    margin-right: 8%;
+  }
 
 
 /* About Section
 ================================================================ */
 .About {
   background: url(../images/Background_Image_2.jpg)center center no-repeat;
-  /*  background-color: #5DADB8;*/
   z-index: 23;
-/*  height: 780px;*/
   position: relative;
 }
 .About_White {
   background-color: rgba(255,255,255, 0.6);
   margin: 2% 8%;
   padding-bottom: 5%;
-/*  border: 1px solid #384544;
-*/}
+}
 .About img{
   float:left;
   width: 26%; 
   height: 53%;
-/*  border: 3px solid #EF6764;
-*/  margin: 4% 3% 1% 16%;
-overflow: hidden;
-position: relative;
-border: 4px solid #40ABB0;
-padding: 1%;
+  margin: 4% 3% 1% 16%;
+  overflow: hidden;
+  position: relative;
+  border: 4px solid #40ABB0;
+  padding: 1%;
 }
 .About_Text {
   float: left;
@@ -871,7 +848,7 @@ padding: 1%;
 .footer, footer {
   height: 60px;
   background-color:white;
-    width:100%;
+  width:100%;
 }
 .footer p {
   clear:both;
@@ -915,16 +892,16 @@ h1 {
   margin: 0px 40px;
 }
 
-h1#Michelle{
+#Michelle{
   font-size: 1.5rem;
   text-align: right;
   color: white;
   font-family: 'Advent Pro', sans-serif;
   font-weight: 100;
-  margin-top: -23px;
+  margin-top: 0px;
 }
 
-h1#Spigner{
+#Spigner{
   font-size: 1.4rem;
   padding: 0px;
   text-align: right;
@@ -939,140 +916,139 @@ h1#Spigner{
   font-family: 'Loved by the King', cursive;
   font-size: 1rem;
   color: white;
-  margin-top: 0.2%
+  margin-top: 1.5%;
+  margin-left: 21%;
 }
 
-  h3 {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 300;
-    font-size: 0.8rem;
-    margin-top: 20px;
-  }
+h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
 
-  ul {
-    list-style-type: none; 
-  }
+ul {
+  list-style-type: none; 
+}
 
-  li, li p {
-    font-family: 'Advent Pro', sans-serif;
-    font-weight: 100;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    list-style: none;
-  }
-  .Section h1 {
-    font-family: 'Advent Pro', sans-serif;
-    font-weight: 100;
-    font-size: 2.0rem;
-    text-transform: uppercase;
-    z-index: 200;
-    position: relative;
-    padding: 0;
-    width: 20%;
-    margin: 2% auto -3% auto;
-    border-bottom: 1px solid black;
-    text-align: center;
-  }
-  /*Correcting for Bolthouse OOH */
-  #BH1 h1 {
-    width: 70%;
-  }
-  .title {
+li, li p {
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 100;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  list-style: none;
+}
+.Section h1 {
+  font-family: 'Advent Pro', sans-serif;
+  font-weight: 100;
+  font-size: 2.0rem;
+  text-transform: uppercase;
+  z-index: 200;
+  position: relative;
+  padding: 0;
+  width: 20%;
+  margin: 2% auto -3% auto;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+/*Correcting for Bolthouse OOH */
+#BH1 h1 {
+  width: 70%;
+}
 
-  }
-  .title p {
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-weight: 100;
-    text-align: center;
-    color: white;
-    vertical-align: text-bottom;
+.title p {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 100;
+  text-align: center;
+  color: white;
+  vertical-align: text-bottom;
 
-  }
-  .title p:first-child {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    line-height: 1.3rem;
-    margin-bottom: 5px;
-    padding: 25% 10% 0% 10%;
-  }
-  .title p:nth-child(2){
-    font-size: 0.8rem;
-    line-height: 0.7rem;
-    margin-top: 0;
-    padding: 0 10% 25% 10%;
-  }
+}
+.title p:first-child {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1.3rem;
+  margin-bottom: 5px;
+  padding: 25% 10% 0 10%;
+}
+.title p:nth-child(2){
+  font-size: 0.8rem;
+  line-height: 0.7rem;
+  margin-top: 0;
+  padding: 0 10% 25% 10%;
+}
 
-  .Resume p {
-    font-size: 0.6rem;
-    font-family: 'Quicksand', sans-serif;
-  }
-  .Resume h2 {
-    text-align: left;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color: #4B918D;
-    padding: 0;
-  }
-  .Experience h2 {
-    width: 55%;
-    text-align: center;
-    background-color: #189DAA;
-    color: white;
-    padding: 5px;
-  }
-  .Education h2{
-    width: 100%;
-    text-align: center;
-    background-color: #189DAA;
-    color: white;
-    padding: 5px;
-  }
-  .Education p {
-    text-align: right
-  }
-  .Resume strong {
-    font-size: 0.8rem;
-  }
-  .Education strong {
-    text-transform: uppercase;
-  }
-  .Skills h2 {
-    text-align: center;
-  }
-  #PDF{
-    text-align: right;
-    text-transform: uppercase;
-  }
-  .About h2 {
-     font-family: 'Advent Pro', sans-serif;
-    font-weight: 300;
-    font-size: 2rem;
-    font-weight: 400;
-    text-align:center;
-  }
-  .Fun-Stuff h2 {
-    font-size: 1.2rem;
-  }
-  .About p {
-    font-family: 'Lato', sans-serif;
-    text-transform: capitalize;
-    font-weight: 300;
-    font-size: 0.9rem;
-    color: black;
-    line-height: 1.5rem;
-    text-align: center;
-  }
-  .Fun-Stuff p {
-    line-height: 1.5rem;
-  }
+.Resume p {
+  font-size: 0.6rem;
+  font-family: 'Quicksand', sans-serif;
+}
+.Resume h2 {
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #4B918D;
+  padding: 0;
+}
+.Experience h2 {
+  width: 55%;
+  text-align: center;
+  background-color: #189DAA;
+  color: white;
+  padding: 5px;
+}
+.Education h2{
+  width: 100%;
+  text-align: center;
+  background-color: #189DAA;
+  color: white;
+  padding: 5px;
+}
+.Education p {
+  text-align: right
+}
+.Resume strong {
+  font-size: 0.8rem;
+}
+.Education strong {
+  text-transform: uppercase;
+}
+.Skills h2 {
+  text-align: center;
+}
+#PDF{
+  text-align: right;
+  text-transform: uppercase;
+}
+.About h2 {
+ font-family: 'Advent Pro', sans-serif;
+ font-weight: 300;
+ font-size: 2rem;
+ font-weight: 400;
+ text-align:center;
+}
+.Fun-Stuff h2 {
+  font-size: 1.2rem;
+}
+.About p {
+  font-family: 'Lato', sans-serif;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: black;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.Fun-Stuff p {
+  line-height: 1.5rem;
+}
 
-  #Back, .Back {
+#Back {
   font-family: 'Jura', sans-serif;
   font-weight: 400;
   font-size: 0.7rem;
-  }
+}
 
 /* Classes
 ================================================================ */
@@ -1144,8 +1120,6 @@ h1#Spigner{
 
 #Title-Load li {
   opacity: 0;
-  /*ont-family: 'Fira Sans', sans-serif;*/
-  /*  font-weight: 300;*/
   font-family: 'Loved by the King', cursive;
   text-transform: lowercase;
   font-size: 2rem;
@@ -1155,7 +1129,7 @@ h1#Spigner{
   width: 100%;
   margin: 0 auto;
   text-align:center;
-  line-height: 0rem;
+  line-height: 0;
   padding: 0;
 }
 
@@ -1165,7 +1139,7 @@ h1#Spigner{
   padding:30px;
 }
 .Section_Closed {
-  height:0px;
+  height:0;
   margin-top: 0;
   margin-bottom:0;
 }
@@ -1175,17 +1149,17 @@ h1#Spigner{
 /*#Thinker {
   transition: all 400ms ease-in-out;
   }*/
-.fade-In-Faster {
-      -webkit-animation: fadein 900ms ease-in-out 600ms;
+  .fade-In-Faster {
+    -webkit-animation: fadein 900ms ease-in-out 600ms;
     -moz-animation: fadein 900ms ease-in-out 600ms;
-    -ms-animation ease-in 1s: fadein 900ms ease-in-out 600ms;
+    -ms-animation: fadein 900ms ease-in-out 600ms;
     -o-animation: fadein 900ms ease-in-out 600ms;
     animation: fadein 900ms ease-in 600ms;
-}
+  }
   .fade-In {
     -webkit-animation: fadein 1000ms ease-in-out;
     -moz-animation: fadein 1000ms ease-in-out;
-    -ms-animation ease-in 1s: fadein 1000ms ease-in-out;
+    -ms-animation: fadein 1000ms ease-in-out;
     -o-animation: fadein 1000ms ease-in-out;
     animation: fadein 1000ms ease-in-out;
   }
@@ -1215,33 +1189,63 @@ h1#Spigner{
     from { opacity: 0; }
     to   { opacity: 1; }
   }
-.Section-Text:hover, .Section-Text p:hover {
-  font-weight:400;
-  font-size: 1.6rem;
-  color: #159DAA;
-  letter-spacing: 0.2rem;
-  cursor: pointer;
-}
+  .Section-Text:hover, .Section-Text p:hover {
+    font-weight:400;
+    font-size: 1.6rem;
+    color: #159DAA;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+  }
 
 /* Mobile Optimization
 ================================================================ */
+@media only screen and (max-width: 1190px) {
+  #Title-Load2 {
+    margin-left:22%;
+  }
+}
+@media only screen and (max-width: 1090px) {
+  #Title-Load2 {
+    margin-left:24%;
+    margin-top:2.1%;
+  }
+}
+@media only screen and (max-width: 1060px) {
+  #Line {
+    left:42.4%;
+  }
+  .Collapse .Main_Sections {
+    margin-top: 8%;
+  }
+}
+@media only screen and (max-width: 940px) {
+  #Title-Load2 {
+    margin-left:26%;
+    margin-top: 2.6%;
+  }
+}
 @media only screen and (max-width: 900px) {
-.title p, .title p:first-child {
+  .title p, .title p:first-child {
     font-size: 1.1rem;
+  }
+  .Collapse .Main_Sections {
+    margin-top: 10%;
   }
 }
 @media only screen and (max-width: 850px) {
-  html {
+  #Title-Load2 {
+    margin-left:28%;
+    margin-top: 2.6%;
   }
   .title p, .title p:first-child {
     font-size: 1.1rem;
   }
-.button-div {
+  .button-div {
     margin:-5px 44% 13px 44%;
     width:12%;
   }
-.footer li {
-  font-size:0.5rem;
+  .footer li {
+    font-size:0.5rem;
   }
   .Social {
     padding-top:4px;
@@ -1249,9 +1253,7 @@ h1#Spigner{
   .footer {
     height: 45px;
   }
-  .About {
-    
-  }
+  
   .About_Text {
     height: 215px;
     width: 61%;
@@ -1319,37 +1321,97 @@ h1#Spigner{
     padding: 0;
 
   }
-  .Icon  {
-    height:20px;
-    width:20px;
+  ul.Main_Sections {
+    padding-top: 10%;
+  }
+}
+@media only screen and (max-width: 758px) {
+  #Title-Load2 {
+    margin-left:30%;
+    margin-top: 2.9%;
+  }
+  .Collapse .Main_Sections {
+    margin-top: 12%;
   }
 }
 @media only screen and (max-width: 700px) {
   html {
     font-size:16px;
   }
-   .Icon  {
-    height:10px;
-    width:10px;
+  img.Icon  {
+    height:40px;
+    width:40px;
   }
-@media only screen and (max-width: 500px) {
-  html {
-    font-size:12px;
+  ul.Main_Sections {
+    padding-top: 12%;
   }
-  
-  .Icon  {
-    height:5px;
-    width:5px;
+/*  .Section-Text{
+    height: 41px;
+  }*/
+  #Line {
+    left: 43%;
+  }
+  #Title-Load2 {
+    margin-left:32%;
+  }
+}
+  @media only screen and (max-width: 590px) {
+    #Michelle {
+      margin-top: 1%;
+    }
+    #Title-Load2 {
+      margin-left:37%;
+      margin-top: 3.8%;
+    }
+      .Collapse .Main_Sections {
+    margin-top: 16%;
   }
   }
-  @media only screen and (max-width: 400px) {
-  html {
-    font-size:10px;
-  }
-/* Navigation
-================================================================ */
+  @media only screen and (max-width: 500px) {
 
+    #Michelle {
+      margin-top: -26px;
+    }
+    #Title-Load2 {
+      margin-left:40%;
+      margin-top: -8px;
+    }
+    html {
+      font-size:13px;
+    }
 
-
-/* Buttons
-   ================================================================ 
+    img.Icon  {
+      height:35px;
+      width:35px;
+    }
+    ul.Main_Sections {
+      padding-top: 15%;
+    }
+/*    .Section-Text{
+      height: 41px;
+    }*/
+    #Spigner {
+      margin: 41px ;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    #Michelle {
+      margin-top: -26px;
+      margin-left:5%;
+    }
+    #Spigner {
+      margin-left:5%;
+    }
+    #Title-Load2 {
+      margin-left:40%;
+      margin-top: -8px;
+    }
+      .Collapse .Main_Sections {
+    margin-top: 21%;
+  }
+  }
+    @media only screen and (max-width: 400px) {
+      html {
+        font-size:12px;
+      }
+    }
