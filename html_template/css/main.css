@@ -48,7 +48,7 @@ body {
 }
 
 div#Content{
-  z-index: 2;
+  z-index: 0;
   width: 100%;
   margin: 12% auto 0 auto;
   padding: 0;
@@ -253,22 +253,18 @@ article:hover .title, article:hover .title p {
   text-align: center;
   display: none;
   float: left;
-  font-family: 'Jura', sans-serif;
-  font-weight: 400;
-  font-size: 0.7rem;
 }
+
 
 .button_div img {
   width: 21px;
   height: 31px;
   float: left;
 }
-
-#Previous, #Next {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
+.button_div:hover {
+  opacity: 0.5;
 }
+
 .Work_Full {
   margin:0% 0 0.5% 0;
   padding: 0;
@@ -668,8 +664,8 @@ html {
   font-size: 16px;
 }
 .Section .Work_Full h1 {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
   font-size: 1.6rem;
   text-align: center;
   border: none;
@@ -1070,6 +1066,12 @@ margin-top: 0.2%
   }
   .Fun-Stuff p {
     line-height: 1.5rem;
+  }
+
+  #Back, .Back {
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem;
   }
 
 /* Classes
