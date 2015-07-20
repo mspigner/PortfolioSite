@@ -14,23 +14,15 @@ ul {
   margin-right:0;
   margin-left:0;
 }
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
 
-/* Global
-================================================================ */
 
-/* Layout
+/* Home Page Layout
 ================================================================ */
 body, html {
   max-height:100%;
 }
 body {
   background-color:white;
-/*  -webkit-transition: all 900ms ease-in-out;
-  -o-transition: all 900ms ease-in-out;
-  transition: all 900ms ease-in-out; */
 }
 
 .Section {
@@ -93,7 +85,7 @@ header h2 {
   padding-top: 0.5%;
 }
 
-/*Sections*/
+/*Center NAV Layout =====================================================*/
 
 .Section-Text {
   margin: 0.5% 40% 0.5% 40%;
@@ -134,7 +126,7 @@ ul.Main_Sections {
 }
 
 
-/* Work Section - Formatting ==============================================================*/
+/* Work Section - Layout ==============================================================*/
 
 .Work {
   clear: both;
@@ -221,7 +213,7 @@ article:hover .title, article:hover .title p {
   margin: 5% auto 1%;
 }
 
-/*Work Section - Pop Out Pages==================================================================*/
+/*Work Section - Project Pages ==================================================================*/
 .Work_Full li {
   display: inline block;
   margin: 0;
@@ -286,11 +278,9 @@ video {
   width: 100%;
 
 }
-/*Bolthouse===============================================*/
-/*Outdoor =================================================================*/
-.BH_OOH {
 
-}
+/*Botlhouse Outdoor Project =================================================================*/
+
 .Section .BH_OOH h1 {
   width: 70%;
   margin: 0 15% 0 15%;
@@ -332,7 +322,7 @@ video {
 }
 
 
-/*Wall ========================================================*/
+/*Bolthosue Living Wall Project========================================================*/
   .BH_Wall{
     overflow: hidden;
 
@@ -408,7 +398,7 @@ video {
 .BH_Wall_Text p {
   text-align: left;
 }
-/*Hotwire===============================================*/
+/*Hotwire Radio Project===============================================*/
 
 #HW_Full {
   padding-top: 2%;
@@ -463,7 +453,7 @@ video {
   padding: 0;
 }
 
-/*Speed Stick===============================================*/
+/*Speed Stick Student Project===============================================*/
 .SpeedStick {
   clear: both;
   margin:2% auto;
@@ -510,7 +500,7 @@ video {
   line-height: 1.1rem;
 }
 
-/*Gatorade===============================================*/
+/*Gatorade Project Page===============================================*/
 .Gatorade {
 
 }
@@ -598,10 +588,8 @@ video {
   margin: 1% 10%;
   text-align: center;
 }
-/*Victoria's Secret ===========================================================*/
-.VictoriaS {
+/*Victoria's Secret Project ===========================================================*/
 
-}
 .Section .VictoriaS h1 {
   width: 70%;
   margin: 3% 15% 0 15%;
@@ -653,7 +641,7 @@ video {
   z-index:70;
 }
 
-/*Font Styles ===============================================*/
+/*Font Styles - For Work Project Pages (Only) ===============================================*/
 html {
   font-size: 16px;
 }
@@ -695,7 +683,7 @@ html {
 strong {
   text-transform: bold;
 }
-/*Animation Classes==================================================*/
+/*Animation Classes - For Work Project Pages (Only) ==================================================*/
 
 
 .slideIn {
@@ -711,7 +699,7 @@ strong {
   visibility: hidden;
 }
 
-/* Resume Section - Formatting =====================================================
+/* Resume Section - Layout =====================================================
 =========*/
 .Resume {
   background-color: white;
@@ -758,7 +746,7 @@ strong {
   }
 
 
-/* About Section
+/* About Section -- Layout
 ================================================================ */
 .About {
   background: url(../images/Background_Image.jpg)center center no-repeat;
@@ -882,7 +870,7 @@ footer {
   border-top: 1px solid gray;
   z-index: 1;
 }
-/* Text Styles
+/* Text Styles - For Homepage and 3 Sections (Resume, About, Work)
 ================================================================ */
 html {
   font-size: 20px;
@@ -1229,8 +1217,7 @@ li, li p {
   font-weight:400;
 }
 
-/* Mobile Optimization
-================================================================ */
+/* Mobile Optimization ======================================================= */
 @media only screen and (max-width: 1190px) {
   #Title-Load2 {
     margin-left:22%;
