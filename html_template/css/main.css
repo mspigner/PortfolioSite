@@ -34,11 +34,8 @@ body {
 }
 
 .Section {
-  -webkit-box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
-  -moz-box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
   box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
   -webkit-transition: all 800ms ease-in-out;
-  -o-transition: all 800ms ease-in-out;
   transition: all 800ms ease-in-out;
   overflow: hidden;
   z-index: 10;
@@ -107,7 +104,6 @@ header h2 {
   clear:both;
   overflow:hidden;
   -webkit-transition: all 450ms ease;
-  -o-transition: all 450ms ease;
   transition: all 450ms ease;
 }
 
@@ -126,7 +122,6 @@ li.Section-Text p {
   border-left: 1px solid black;
   padding-top: 2%;
   -webkit-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 ul.Main_Sections {
@@ -135,7 +130,6 @@ ul.Main_Sections {
   padding-left:0;
   padding-right: 0;
   -webkit-transition: all 550ms ease-in;
-  -o-transition: all 550ms ease-in;
   transition: all 550ms ease-in;
 }
 
@@ -150,7 +144,7 @@ ul.Main_Sections {
   overflow: hidden;
 }
 .Work_TR {
-  margin-top: 5%;
+  margin-top: 2%;
 }
 .Work_BC {
   margin-bottom: 5%;
@@ -197,6 +191,7 @@ ul.Main_Sections {
 .title {
   visibility: hidden;
   opacity: 0;
+  filter: alpha(opacity=0);
   position: absolute;
   z-index: 20;
   background-color: rgba(24,157,170, 0.7);
@@ -207,13 +202,13 @@ ul.Main_Sections {
   top: 0;
   left:0;
   -webkit-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
 article:hover .title, article:hover .title p {
  visibility: visible;
  opacity: 1;
+ filter: alpha(opacity=100);
  cursor: pointer;
 }
 
@@ -231,6 +226,7 @@ article:hover .title, article:hover .title p {
   display: inline block;
   margin: 0;
   padding: 0;
+  font-size: 10px;
   font-size: 0.5rem;
 
 }
@@ -241,6 +237,7 @@ article:hover .title, article:hover .title p {
   cursor: pointer;
   text-align: center;
   opacity: 0.6;
+  filter: alpha(opacity=60);
   margin: 18px 44% 18px 44%;
 }
 
@@ -260,6 +257,7 @@ article:hover .title, article:hover .title p {
 }
 .button_div:hover {
   opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 
 .Work_Full {
@@ -269,8 +267,6 @@ article:hover .title, article:hover .title p {
   width:100%;
   height: 100%;
   background-color:white;
-  -webkit-box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
-  -moz-box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
   box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
 
 }
@@ -303,8 +299,10 @@ video {
   font-weight: 400;
   letter-spacing: 5px;
   text-align: center;
+  line-height: 32px;
   line-height: 1.6rem;
-  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+          transition: all 500ms ease-in-out;
 }
 .BH_OOH hr {
   max-width: 100%;
@@ -322,6 +320,7 @@ video {
   font-family: 'News Cycle', sans-serif;
   color:black;
   font-weight: 400;
+  line-height: 22px;
   line-height: 1.1rem;
 }
 .BH-Video {
@@ -354,6 +353,7 @@ video {
   top: -2.1%;
   color: white;
   padding: 2%;
+  letter-spacing: 8px;
   letter-spacing: 0.4rem;
   width: 100%;
   background-color: rgba(135,175,32,0.4);
@@ -426,6 +426,7 @@ video {
   padding: 0 2% 2% 2%;
   margin: 0;
   color: black;
+  letter-spacing: 8px;
   letter-spacing: 0.4rem;
   width: 100%;
   text-transform: uppercase;
@@ -450,6 +451,7 @@ video {
   padding: 18% 4% 19% 4%;
   font-family: 'News Cycle', sans-serif;
   font-weight: 400;
+  line-height: 22px;
   line-height: 1.1rem;
   color: black;
 }
@@ -473,6 +475,7 @@ video {
   padding-top: 0;
   margin: 0;
   color: black;
+  letter-spacing: 8px;
   letter-spacing: 0.4rem;
   width: 100%;
   text-transform: uppercase;
@@ -503,6 +506,7 @@ video {
   color: black;
   font-family: 'News Cycle', sans-serif;
   font-weight: 400;
+  line-height: 22px;
   line-height: 1.1rem;
 }
 
@@ -513,7 +517,7 @@ video {
 .Executions {
   display:none;
 }
-#GG_Image /*#Gatorade_1*/ {
+#GG_Image {
   float: left;
   max-width: 60%;
   margin: 7px 0 0 4%;
@@ -526,6 +530,7 @@ video {
   padding-top: 0;
   margin: 0;
   color: black;
+  letter-spacing: 8px;
   letter-spacing: 0.4rem;
   width: 100%;
   text-transform: uppercase;
@@ -541,12 +546,15 @@ video {
   margin: 3px 0 0 4%;
   font-family: 'News Cycle', sans-serif;
   font-weight: 400;
+  line-height: 26px;
   line-height: 1.3rem;
 }
 .Gatorade_Text p {
   font-family: 'News Cycle', sans-serif;
   font-weight: 400;
+  font-size: 14px;
   font-size: 0.7rem;
+  line-height: 18px;
   line-height: 0.9rem;
   padding-right: 4%;
   tex-talign: left;
@@ -554,6 +562,7 @@ video {
 .Gatorade .team {
   clear:both;
   text-align: left;
+  font-size: 14px;
   font-size: 0.7rem;
   text-align: left;
   padding: 0 2%;
@@ -568,7 +577,6 @@ video {
   color: white;
   text-transform: uppercase;
   -webkit-transition: all 600ms ease;
-  -o-transition: all 600ms ease;
   transition: all 600ms ease;
   border: 2px solid white;
 
@@ -602,6 +610,7 @@ video {
   font-weight: 400;
   letter-spacing: 5px;
   text-align: center;
+  line-height: 32px;
   line-height: 1.6rem;
   text-transform: uppercase;
 }
@@ -628,13 +637,14 @@ video {
   margin: 7% auto 7% auto;
   font-family: 'News Cycle', sans-serif;
   font-weight: 400;
+  line-height: 22px;
   line-height: 1.1rem;
   color: black;
 }
 .VictoriaS img {
   float: left;
   margin: 3% 0 3% 0%;
-  max-width: 67%;
+  max-width: 63%;
   max-height:100%;
   padding: 0;
 }
@@ -650,6 +660,7 @@ html {
 .Section .Work_Full h1 {
   font-family: 'Jura', sans-serif;
   font-weight: 400;
+  font-size: 32px;
   font-size: 1.6rem;
   text-align: center;
   border: none;
@@ -659,12 +670,14 @@ html {
 .Work_Full h2 {
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
+  font-size: 28px;
   font-size: 1.4rem;
   text-align: left;
 }
 .Work_Full p {
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
+  font-size: 14px;
   font-size: 0.7rem;
 }
 
@@ -674,7 +687,9 @@ html {
 #View_More {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 100;
+  font-size: 20px;
   font-size: 1rem;
+  line-height: 24px;
   line-height: 1.2rem;
 }
 strong {
@@ -692,6 +707,7 @@ strong {
 }
 .slideOut {
   opacity: 0;
+  filter: alpha(opacity=0);
   visibility: hidden;
 }
 
@@ -700,7 +716,6 @@ strong {
 .Resume {
   background-color: white;
   z-index: 15;
-  margin-bottom: 10px;
 }
   .Experience {
     z-index: 15;
@@ -709,6 +724,7 @@ strong {
     margin-right: 8%;
     padding: 26px;
     padding-bottom: 12px;
+    margin-bottom:10px;
     border-bottom: 1px solid #384544;
   }
   .Experience article {
@@ -873,12 +889,14 @@ html {
   height:100%;
 }
 .footer li {
+  font-size: 14px;
   font-size: 0.7rem;
   font-family: 'Advent Pro', sans-serif;
   font-weight: 300;
   color: gray;
 }
 .footer p {
+  font-size: 12px;
   font-size: 0.6rem;
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;;
@@ -893,6 +911,7 @@ h1 {
 }
 
 #Michelle{
+  font-size: 30px;
   font-size: 1.5rem;
   text-align: right;
   color: white;
@@ -902,18 +921,21 @@ h1 {
 }
 
 #Spigner{
+  font-size: 28px;
   font-size: 1.4rem;
   padding: 0px;
   text-align: right;
   color:white;
   font-family: 'Advent Pro', sans-serif;
   font-weight: 100;
+  line-height: 12px;
   line-height: 0.6rem
 }
 
 #Title-Load2 {
 
   font-family: 'Loved by the King', cursive;
+  font-size: 20px;
   font-size: 1rem;
   color: white;
   margin-top: 1.5%;
@@ -923,6 +945,7 @@ h1 {
 h3 {
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
+  font-size: 16px;
   font-size: 0.8rem;
   margin-top: 20px;
 }
@@ -934,20 +957,23 @@ ul {
 li, li p {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 100;
+  font-size: 32px;
   font-size: 1.6rem;
   text-transform: uppercase;
   list-style: none;
 }
+
 .Section h1 {
   font-family: 'Advent Pro', sans-serif;
   font-weight: 100;
+  font-size: 40px;
   font-size: 2.0rem;
   text-transform: uppercase;
-  z-index: 200;
   position: relative;
+  z-index: 200;
   padding: 0;
   width: 20%;
-  margin: 2% auto -3% auto;
+  margin: 2% auto 0% auto;
   border-bottom: 1px solid black;
   text-align: center;
 }
@@ -966,19 +992,24 @@ li, li p {
 }
 .title p:first-child {
   text-transform: uppercase;
+  font-size: 30px;
   font-size: 1.5rem;
+  line-height: 26px;
   line-height: 1.3rem;
   margin-bottom: 5px;
   padding: 25% 10% 0 10%;
 }
 .title p:nth-child(2){
+  font-size: 16px;
   font-size: 0.8rem;
+  line-height: 14px;
   line-height: 0.7rem;
   margin-top: 0;
   padding: 0 10% 25% 10%;
 }
 
 .Resume p {
+  font-size: 12px;
   font-size: 0.6rem;
   font-family: 'Quicksand', sans-serif;
 }
@@ -986,6 +1017,7 @@ li, li p {
   text-align: left;
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
+  font-size: 24px;
   font-size: 1.2rem;
   text-transform: uppercase;
   color: #4B918D;
@@ -1009,6 +1041,7 @@ li, li p {
   text-align: right
 }
 .Resume strong {
+  font-size: 16px;
   font-size: 0.8rem;
 }
 .Education strong {
@@ -1024,29 +1057,35 @@ li, li p {
 .About h2 {
  font-family: 'Advent Pro', sans-serif;
  font-weight: 300;
+ font-size: 40px;
  font-size: 2rem;
  font-weight: 400;
  text-align:center;
 }
 .Fun-Stuff h2 {
+  font-size: 24px;
   font-size: 1.2rem;
 }
 .About p {
   font-family: 'Lato', sans-serif;
   text-transform: capitalize;
   font-weight: 300;
+  font-size: 18px;
   font-size: 0.9rem;
   color: black;
+  line-height: 30px;
   line-height: 1.5rem;
   text-align: center;
 }
 .Fun-Stuff p {
+  line-height: 30px;
   line-height: 1.5rem;
 }
 
 #Back {
   font-family: 'Jura', sans-serif;
   font-weight: 400;
+  font-size: 14px;
   font-size: 0.7rem;
 }
 
@@ -1058,12 +1097,14 @@ li, li p {
   z-index:2;
 }
 .Mini_Nav #Michelle, .Mini_Nav #Spigner, .Mini_Nav #Title-Load2 {
+  font-size: 12px;
   font-size: 0.6rem;
   z-index: 3;
   padding: 0;
   margin-top: -10px;
   margin: 0;
   margin-left: 3%;
+  line-height: 13px;
   line-height: 0.65rem;
 }
 .Mini_Nav #Title-Load2 {
@@ -1109,19 +1150,23 @@ li, li p {
 .PageLoad #Michelle, .PageLoad #Spigner, .PageLoad h2 {
   position: static;
   float: left;
+  font-size: 60px;
   font-size: 3rem;
   clear: both;
   width: 100%;
   margin: 0 auto;
   text-align:center;
+  line-height: 50px;
   line-height: 2.5rem;
   padding:0;
 }
 
 #Title-Load li {
   opacity: 0;
+  filter: alpha(opacity=0);
   font-family: 'Loved by the King', cursive;
   text-transform: lowercase;
+  font-size: 40px;
   font-size: 2rem;
   color: white;
   clear:both;
@@ -1151,51 +1196,37 @@ li, li p {
   }*/
   .fade-In-Faster {
     -webkit-animation: fadein 900ms ease-in-out 600ms;
-    -moz-animation: fadein 900ms ease-in-out 600ms;
-    -ms-animation: fadein 900ms ease-in-out 600ms;
-    -o-animation: fadein 900ms ease-in-out 600ms;
     animation: fadein 900ms ease-in 600ms;
   }
   .fade-In {
     -webkit-animation: fadein 1000ms ease-in-out;
-    -moz-animation: fadein 1000ms ease-in-out;
-    -ms-animation: fadein 1000ms ease-in-out;
-    -o-animation: fadein 1000ms ease-in-out;
     animation: fadein 1000ms ease-in-out;
   }
 
   @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from { opacity: 0; filter: alpha(opacity=0); }
+    to   { opacity: 1; filter: alpha(opacity=100); }
   }
 
   /* Firefox < 16 */
-  @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
 
   @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-
-  @-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-
-  @-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from { opacity: 0; filter: alpha(opacity=0); }
+    to   { opacity: 1; filter: alpha(opacity=100); }
   }
   .Section-Text:hover, .Section-Text p:hover {
     font-weight:400;
+    font-size: 32px;
     font-size: 1.6rem;
     color: #159DAA;
+    letter-spacing: 4px;
     letter-spacing: 0.2rem;
     cursor: pointer;
   }
+.Section h1:hover {
+  cursor: pointer;
+  font-weight:400;
+}
 
 /* Mobile Optimization
 ================================================================ */

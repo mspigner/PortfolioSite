@@ -25,26 +25,14 @@ $(document).ready(function(){
 		$('#Content, #Line, #Title-Load2').removeClass('Closed');
 		$('#nav-bar').removeClass('load');
 	});
-	// $('#Content, #Line, #Title-Load2').delay(1000).queue(function(){
-	// 	$(this).removeClass('Closed');
-	// 	$('header').animate({up:50%}, "slow", 200);
-	// });
+
 });
 
 function addFadeIn(){
 	$(this).addClass('fade-In');
 }
 
-// var slideToPosition = $('body').position();
 
-// when user clicks View Resume PDF text
-	// Open PDF in separate page
-
-
-// when user hovers over Email Address
-	// change mouse cursor to hand
-// when user clicks Email Address in footer
-	// Open email in user's email program
 
 // When the user clicks the work icon - the text or the icon
 var scrollHeight = $(window).scrollTop();
@@ -53,33 +41,13 @@ $('#Work-Icon').children('p','img').on('click', function (){
 	// Show the work div.
 	$('.Work').removeClass('Section_Closed');
 });
-// When the user clicks the resume icon - the text or the icon
+
 $('#Resume-Icon').on('click', function (){
-	// Pulling difference from top to the div
-	// $(window).on('scroll', function (){
-	// var scrollHeight = parseFloat($(window).scrollTop());
-	// console.log(scrollHeight);
-	// });
-	// var distanceFromTop = parseFloat($('.Resume').offset().top);
-	// var positionHere = distanceFromTop += scrollHeight;
-	// $(window).animate({
-	// 	backgroundPositionY: 'distanceFromTop'
-	// });
-	// Show the resume div
+
 	$('.Resume').removeClass('Section_Closed');
-	// $(window).scroll(scrollToElement);
-	// // $(window).scrollTop(positionX, positionY);
-	// console.log(positionHere);
-	// location.hash = 'positionHere';
-	 // $('html, body').animate({
-  //       scrollTop: $(positionHere).offset().top
-  //   }, 2000);
-	// Move the resume div to the top of the page below the header
+
 	
 });
-
-
-// function name
 
 
 // When the user clicks on the about icon or text
@@ -98,11 +66,9 @@ $('.Section-Text').on('click',function (){
 	$('#Line').addClass('Section_Closed').delay(2000);
 	// Shift top margin of Work div up so there is less white space at the top.
 	$('body').addClass('Collapse').delay(2000);
-	// if ($('header').hasClass('Mini_Nav')){
-	// 	$('header').removeClass('Mini_Nav');
-	// 	$('header').animate(
-	// 		{height: "80px"});
-	// }
+	$('#Title-Load').removeClass('Open');
+	$('#Title-Load').addClass('Closed');
+
 });
 
 // [return the user to list view]
@@ -117,7 +83,8 @@ $('.Section h1').on('click', function (){
 	// Whatever section is open, close it.
 	$('.Section').addClass('Section_Closed');
 	// Hide the 
-	// $('.Section-Div-Title').hide();
+	// // $('.Section-Div-Title').hide();
+
 
 });
 	
@@ -137,6 +104,7 @@ $('.title').on('click', function(){
 			{height: "45px"});
 	$('header').addClass('Mini_Nav');
 	$('body').addClass('Content_Collapse');
+	$(window).scrollTop(0,0);
 });
 
 // When the user clicks the back button
@@ -153,16 +121,7 @@ $('.button_div').on('click', function (){
 	$('body').removeClass('Content_Collapse');
 });
 	
-// function myFunction() {
-//     alert("Hello! I am an alert box!");
-// }
 
-
-// code for BH_Wall photo transition
-// when the user clics the view more button (#View_More)
-	// Add 1 to the current position
-	// Change the image source to the one that coordinates with the current position 
-	// Display the next and back buttons 
 
 
 
