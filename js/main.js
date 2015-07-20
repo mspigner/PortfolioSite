@@ -27,6 +27,9 @@ $(document).ready(function(){
 	});
 
 });
+$('#Michelle').on('click',function(){
+	location.reload();
+});
 
 function addFadeIn(){
 	$(this).addClass('fade-In');
