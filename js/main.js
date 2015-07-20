@@ -98,6 +98,11 @@ $('.Section-Text').on('click',function (){
 	$('#Line').addClass('Section_Closed').delay(2000);
 	// Shift top margin of Work div up so there is less white space at the top.
 	$('body').addClass('Collapse').delay(2000);
+	// if ($('header').hasClass('Mini_Nav')){
+	// 	$('header').removeClass('Mini_Nav');
+	// 	$('header').animate(
+	// 		{height: "80px"});
+	// }
 });
 
 // [return the user to list view]
@@ -113,6 +118,7 @@ $('.Section h1').on('click', function (){
 	$('.Section').addClass('Section_Closed');
 	// Hide the 
 	// $('.Section-Div-Title').hide();
+
 });
 	
 // When the user clicks on a work icon.
