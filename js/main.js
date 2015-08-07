@@ -126,6 +126,51 @@ $('.button_div').on('click', function (){
 	$('body').removeClass('Content_Collapse');
 });
 	
+// Speed Stick Carousel
+
+// Create an array with all of the picture images and set it with a variable. 
+var speedImages = ["html_template/images/Work/Speed_Stick_Image.001.jpg","html_template/images/Work/Speed_Carousel/S_C_1.jpg","html_template/images/Work/Speed_Carousel/S_C_2.jpg","html_template/images/Work/Speed_Carousel/S_C_3.jpg","html_template/images/Work/Speed_Carousel/S_C_4.jpg"]
+// Create a variable for the current position
+// Set that current position to zero
+var currentSpeedImage = 0;
+	
+// When the user clicks the next arrow
+$('.Right_Arrow').on('click',function (){
+	if (currentSpeedImage == 4){
+		$('.Right_Arrow').prop('disabled',true);
+		currentSpeedImage += 0;
+	}
+	else {
+	// Enable the previous button
+	$('.Left_Arrow').prop('disabled',false);
+	// Grab the current position and add 1
+	currentSpeedImage += 1;
+	console.log(currentSpeedImage);
+	// Display the image that corresponds with that variable position
+	$('#Speed_Carousel').attr('src',speedImages[currentSpeedImage]);
+	
+	}
+});
+
+// When the user clicks previous button
+$('.Left_Arrow').on('click', function(){
+	if (currentSpeedImage === 0) {
+		$('.Left_Arrow').prop('disabled',true);
+	}
+	else { 
+	// Enable the next button
+	$('.Right_Arrow').prop('disabled',false);
+	// Grab the current position and subtract 1
+	currentSpeedImage -= 1;
+	console.log(currentSpeedImage);
+	// Dispaly the image that corresponds with that variable position
+	$('#Speed_Carousel').attr('src',speedImages[currentSpeedImage]);
+	}
+});
+		
+
+
+
 
 
 

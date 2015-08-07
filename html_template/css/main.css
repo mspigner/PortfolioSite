@@ -477,9 +477,10 @@ video {
 }
 .SpeedStick img {
   float: left;
-  width: 48%;
-  margin: 4.5% 0 4.5% 1%;
   text-align: right;
+  position: relative;
+  width:100%;
+  height:100%;
 }
 .SpeedStick_Text {
   width: 45%;
@@ -498,6 +499,40 @@ video {
   font-weight: 400;
   line-height: 22px;
   line-height: 1.1rem;
+}
+.Speed_Image {
+  position: relative;
+  float: left;
+  width: 48%;
+  margin: 4.5% 0 4.5% 1%;
+  text-align: right;
+  border: 1px solid gray;
+}
+.Speed_Image img {
+  height: 10%;
+}
+#Speed_Left_Arrow, #Speed_Right_Arrow {
+  left: 12%;
+  top: 45%;
+  height: 35px;
+  width: 50px;
+
+}
+.Left_Arrow, .Right_Arrow {
+  background-color: rgb(255,255,255);
+  width: 8%;
+  position: absolute;
+  z-index: 22;
+  height: 100%;
+  opacity: 0.3;
+
+}
+.Left_Arrow {
+  text-align: left;
+}
+.Right_Arrow {
+  text-align: right;
+  margin-left: 92%;
 }
 
 /*Gatorade Project Page===============================================*/
@@ -547,7 +582,7 @@ video {
   line-height: 18px;
   line-height: 0.9rem;
   padding-right: 4%;
-  tex-talign: left;
+  text-align: left;
 }
 .Gatorade .team {
   clear:both;
