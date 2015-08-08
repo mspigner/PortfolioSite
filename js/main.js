@@ -80,7 +80,7 @@ $('.Section-Text').on('click',function (){
 // When the user clicks on the header within each section
 $('.Section h1').on('click', function (){
 	// Unhide the section text and icon
-	$('.Section-Text').removeClass('Section_Closed');
+	$('.Section-Text').removeClass('Section_Closed').delay(5000);
 	// Bring the vertical line back into view
 	$('#Line').removeClass('Section_Closed');
 	// Add the top margin back to the work div, ul, li units
@@ -166,7 +166,28 @@ $('.Left_Arrow').on('click', function(){
 	// Dispaly the image that corresponds with that variable position
 	$('#Speed_Carousel').attr('src',speedImages[currentSpeedImage]);
 	}
+});	
+
+// Gatorade Gum TV Spots
+
+// When the user clicks the View TV spots button
+$('#View_More').on('click',function (){
+	// Hide Print Ad
+	$('#GG_Image').toggleClass('Closed');
+	// Show TV Spot
+	$('#Gatorade_Video').toggleClass('Closed');
+	// // Change html in button to View Print Ad
+	// $('#View_More').html('View Print Ad');
+	// if GG Image is shown
+	if ($('#GG_Image').hasClass('Closed')){
+			$('#View_More').html('View Print Ad');
+		}
+	else {
+		// display html View TV Spot
+			$('#View_More').html('View TV Spot');
+		}
 });
+
 		
 
 

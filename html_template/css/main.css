@@ -23,12 +23,16 @@ body, html {
 }
 body {
   background-color:white;
+  -webkit-transition: all 450ms ease-in;
+  -o-transition: all 450ms ease-in;
+  transition: all 450ms ease-in;
 }
 
 .Section {
   box-shadow: inset 1px 1px 11px -1px rgba(161,161,161,0.75);
-  -webkit-transition: all 800ms ease-in-out;
-  transition: all 800ms ease-in-out;
+  -webkit-transition: all 600ms ease-in-out;
+  transition: all 600ms ease-in-out;
+  height: 100%;
   overflow: hidden;
   z-index: 10;
   margin: 0 auto 0 auto;
@@ -48,7 +52,7 @@ body {
   position: absolute;
   top:80px;
   left:42%;
-  border-left: 2.5px dashed #189DAA;
+  border-left: 1.5px dashed #189DAA;
   height: 100%;
   z-index: -1;
 }
@@ -95,8 +99,9 @@ header h2 {
   height: 52px;
   clear:both;
   overflow:hidden;
-  -webkit-transition: all 450ms ease;
-  transition: all 450ms ease;
+  -webkit-transition: all 450ms ease-in;
+  -o-transition: all 450ms ease-in;
+  transition: all 450ms ease-in;
 }
 
 img.Icon {
@@ -504,7 +509,7 @@ video {
   position: relative;
   float: left;
   width: 48%;
-  margin: 4.5% 0 4.5% 1%;
+  margin: 7% 0 4.5% 0;
   text-align: right;
   border: 1px solid gray;
 }
@@ -542,11 +547,31 @@ video {
 .Executions {
   display:none;
 }
-#GG_Image {
+.Gatorade_Image {
   float: left;
-  max-width: 60%;
-  margin: 7px 0 0 4%;
+  width: 60%;
+  margin: 4% 4% 0 2%;
   text-align: right;
+  position: relative;
+  overflow:hidden;
+}
+#GG_Image {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 100%;
+  height:100%;
+  z-index:40;
+}
+
+
+#Gatorade_Video {
+  z-index: 38;
+  padding-top:2%;
+  position: absolute;
+  left: 0px;
+  top: 2%;
+  max-width: 100%;
 }
 .Section .Gatorade h1 {
   font-family: 'Jura', sans-serif;
@@ -568,7 +593,7 @@ video {
 .Gatorade_Text {
   float: left;
   width: 30%;
-  margin: 3px 0 0 4%;
+  margin: 2% 0 0 4%;
   font-family: 'News Cycle', sans-serif;
   font-weight: 400;
   line-height: 26px;
@@ -647,7 +672,7 @@ video {
   width: 30%;
   padding: 0;
   float: left;
-  margin: 13% 4% 13% 3%;
+  margin: 7% 4% 7% 3%;
   z-index:40;
   top: 0;
   left: 0;
@@ -779,6 +804,14 @@ strong {
   #PDF {
     margin-right: 8%;
   }
+  #PDF a {
+    color: rgb(24,157,170);
+    text-decoration: none;
+    text-transform: bolder;
+  }
+  #PDF:hover a {
+    color: #F16661;
+  }
 
 
 /* About Section -- Layout
@@ -820,6 +853,7 @@ strong {
   color: white;
   padding: 1.2%;
   width: 70%;
+  text-transform: none;
 }
 .Fun-Stuff {
   clear: both;
@@ -832,6 +866,13 @@ strong {
   width: 50%;
   margin: 1% auto 1% auto;
 }
+.Fun-Stuff a {
+    color: #9F9D9D;
+    text-decoration: none;
+}
+.Fun-Stuff:hover a {
+  color: #F16661;
+}
 
 .About p {
   margin: 0;
@@ -842,6 +883,7 @@ strong {
 .Fun-Stuff p {
   width: 80%;
   margin: 0 auto;
+  text-transform: none;
 }
 .line_horizontal {
   position: absolute;
@@ -1091,7 +1133,6 @@ li, li p {
 }
 .About p {
   font-family: 'Lato', sans-serif;
-  text-transform: capitalize;
   font-weight: 300;
   font-size: 18px;
   font-size: 0.9rem;
