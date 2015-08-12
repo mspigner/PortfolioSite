@@ -96,7 +96,7 @@ header h2 {
   text-align: center;
   padding: 3px auto 1px auto;
   width: 35%;
-  height: 52px;
+  height: 2.8rem;
   clear:both;
   overflow:hidden;
   -webkit-transition: all 450ms ease-in;
@@ -1475,7 +1475,7 @@ li, li p {
     margin-left:32%;
   }
   .Section-Text {
-    height: 42px;
+    height: 2.4rem;
   }
 }
   @media only screen and (max-width: 590px) {
@@ -1510,9 +1510,7 @@ li, li p {
     ul.Main_Sections {
       margin-top: 26%;
     }
-/*    .Section-Text{
-      height: 41px;
-    }*/
+ 
     #Spigner {
       margin: 41px;
     }
@@ -1520,15 +1518,12 @@ li, li p {
   @media only screen and (max-width: 450px) {
     #Michelle {
       margin-top: -26px;
-      margin-left:5%;
+      margin-left:1%;
     }
     #Spigner {
-      margin-left:5%;
+      margin-left:1%;
     }
-    #Title-Load2 {
-      margin-left:40%;
-      margin-top: -8px;
-    }
+
     .Collapse .Main_Sections {
     margin-top: 21%;
     }
